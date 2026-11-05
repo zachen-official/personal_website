@@ -1,7 +1,7 @@
-name: Thuta Aung
-title: Thuta Aung | Zack Chen
-description: Portfolio of Thuta Aung (Zack Chen), computer engineer focused on embedded systems and firmware.
-url: https://thuthazack.github.io
-baseurl: ""
+name: Zack Chen
+title: Zack Chen | Firmware & Telematics
+description: Portfolio of Zack Chen, firmware and telematics SDET focused on embedded systems, cellular connectivity, and release automation.
+url: https://zachen-official.github.io
+baseurl: "/personal_website"
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title

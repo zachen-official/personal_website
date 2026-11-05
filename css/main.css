@@ -1123,6 +1123,109 @@ footer ul {
   font-size: 0.85rem;
 }
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+  margin-top: 0.5rem;
+}
+
+.skill-block {
+  padding-top: 1rem;
+  border-top: 1px solid #d9c9bc;
+}
+
+.skill-block h3 {
+  margin: 0 0 0.75rem;
+  color: #49372f;
+  font: 600 1.05rem/1.35 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  text-align: left;
+  font-style: normal;
+}
+
+.skill-block p {
+  margin: 0;
+  color: #51453e;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.impact-metrics {
+  margin: 0.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem 1.5rem;
+}
+
+.impact-metrics li {
+  padding: 0.85rem 0;
+  border-top: 1px solid #d9c9bc;
+  color: #51453e;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.impact-metrics strong {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: #49372f;
+  font-size: 1.15rem;
+}
+
+.impact-note {
+  margin-top: 1.5rem;
+  color: #66594f;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.resume-page .resume-header {
+  margin-bottom: 2rem;
+}
+
+.resume-page .resume-title {
+  margin-top: 0.35rem;
+  color: #79533f;
+  font-size: 1.05rem;
+}
+
+.resume-page .resume-contact {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.resume-page h2 {
+  margin-top: 2rem;
+  text-align: left;
+  font-size: 1.35rem;
+}
+
+.resume-page h3 {
+  margin-top: 1.5rem;
+  text-align: left;
+  font-style: normal;
+  font-size: 1.05rem;
+  color: #332a25;
+}
+
+.resume-page h4 {
+  margin: 1.1rem 0 0.4rem;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #79533f;
+}
+
+.resume-page ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.resume-page li + li {
+  margin-top: 0.35rem;
+}
+
 .portfolio-footer {
   padding: 1.5rem 0 3rem;
   color: #66594f;
@@ -1130,6 +1233,14 @@ footer ul {
 }
 
 @media (max-width: 850px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-metrics {
+    grid-template-columns: 1fr;
+  }
+
   .portfolio-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1175,7 +1286,9 @@ footer ul {
 
   .about-grid,
   .experience-entry,
-  .project-entry {
+  .project-entry,
+  .skills-grid,
+  .impact-metrics {
     grid-template-columns: 1fr;
     gap: 1.1rem;
   }

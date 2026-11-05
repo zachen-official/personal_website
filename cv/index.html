@@ -1,9 +1,86 @@
 ---
 layout: default
-title: Résumé | Thuta Aung
-description: Thuta Aung's résumé is currently under construction.
+title: Résumé | Zack Chen
+description: Résumé for Zack Chen — SDET, Firmware / Telematics at Zoox.
 ---
-<article class="page prose resume-placeholder">
-	<h1>Résumé</h1>
-	<p>Under construction.</p>
+<article class="page prose resume-page">
+	<header class="resume-header">
+		<h1>Zack Chen</h1>
+		<p class="resume-title">Software Development Engineer in Test — Firmware / Telematics</p>
+		<p class="resume-contact"><a href="mailto:zachen.official@gmail.com">zachen.official@gmail.com</a> · <a href="https://github.com/zachen-official">GitHub</a> · <a href="https://www.linkedin.com/in/thuta-aung-909a22114">LinkedIn</a></p>
+	</header>
+
+	<section>
+		<h2>Summary</h2>
+		<p>Embedded firmware SDET with ~6 years owning the validation, release, and increasingly the implementation of the Telematics Control Unit (TCU) and TUX audio stacks on Zoox’s autonomous vehicle fleet. Built and sole owner of the TCU validation framework, the firmware flashing and deploy-artifact system, and the release pipeline that carries a vendor drop to the fleet: 49 TCU firmware versions and 22 TUX versions shipped to production. Progressed from test-only ownership to writing production C++ middleware, root-causing modem and kernel-level faults, and setting process across organizations — authoring the proposals that redefined the manufacturing line’s TCU provisioning flow, the eSIM activation lifecycle, and the source-code collaboration model with a Tier-1 vendor.</p>
+	</section>
+
+	<section>
+		<h2>Core technical areas</h2>
+		<p><strong>Cellular / telecom</strong> — LTE and 5G NSA/SA provisioning, eSIM remote provisioning under SGP.02 (CMP-driven) and SGP.32 (eIM/IPA), eUICC profile management and carrier switching, APN/PDN and IMS configuration, band and RAT selection, AT&amp;T / T-Mobile / Verizon carrier integration, oFono / D-Bus / RIL telephony stack, Qualcomm and Shannon modem log analysis.</p>
+		<p><strong>Embedded systems</strong> — Yocto/BitBake, systemd, POSIX IPC, iptables/conntrack, netfilter routing, Linux bridges and 802.1q VLANs, hostapd/WiFi AP, A2B audio chains, PulseAudio, DLT logging, serial-console and syslog triage, tcpdump capture analysis, coredump and register-level crash analysis.</p>
+		<p><strong>Languages &amp; tooling</strong> — Python, C++ (gTest), Bash, Bazel, Docker, Git/GitHub Enterprise, Bamboo CI, Artifactory artifact publishing and signed release pipelines, REST/mTLS, Twilio telephony APIs, Argus dashboards, TestRail, Jira/Confluence automation, MCP servers and agent tooling; domain-specific language and compiler design (A2B register toolchain).</p>
+	</section>
+
+	<section>
+		<h2>Experience</h2>
+		<h3>Zoox — SDET, Firmware / TCU · Feb 2021 – Present</h3>
+		<p>Contractor Feb 2021 – Dec 2021; converted to full-time Nov 2021.</p>
+
+		<h4>Release pipeline and firmware flashing system</h4>
+		<ul>
+			<li>Established the firmware flashing and deploy-artifact system the fleet runs on — a generator that turns a vendor firmware drop into the signed deploy tarball every vehicle flashes, with per-version manifests, upgrade/provision layouts, cross-platform signatures, and a structured failure taxonomy.</li>
+			<li>Re-architected artifact delivery for security: signed deploy tarballs from Artifactory, reproducible builds pinned by git SHA, and CI/non-interactive cut modes so any engineer can produce a publishable artifact.</li>
+			<li>Release captain for TCU firmware (49 versions, S7.8.3 → S8.4.102) and TUX audio validation (22 versions across TUX-02/-03/-04).</li>
+		</ul>
+
+		<h4>TCU ↔ vehicle deploy integration</h4>
+		<ul>
+			<li>Designed and owned the OTA configure-and-provision contract between TCU firmware and the driving monorepo; implemented both sides across four repositories.</li>
+			<li>Defined Universal Config and deploy-manifest schemas and the upgrade/reprovision decision algorithm with failure semantics (self-rollback, bounded retry, escalation).</li>
+			<li>Owned cellular configuration management across AT&amp;T, T-Mobile, and Verizon as versioned, reviewed profile sets.</li>
+		</ul>
+
+		<h4>eSIM lifecycle — Gen1 and Gen2</h4>
+		<ul>
+			<li>Brought up eSIM end to end on both generations: Gen1 SGP.02 (CMP-driven) and Gen2 SGP.32 (eIM/IPA).</li>
+			<li>Authored the SimManager Conekt API client/CLI (~1,900 lines) and Gen2 manufacturing activation tooling; hardened end-of-line activation for line reliability.</li>
+			<li>Owning Gen2 manufacturing-line eSIM bring-up (2026), including transport migration toward gRPC.</li>
+		</ul>
+
+		<h4>Test framework, production firmware &amp; connectivity</h4>
+		<ul>
+			<li>Sole owner of z2-tcu-dev from first commit: 430+ PRs authored; critical/functional/stress suites; Twilio two-way-audio automation with PESQ scoring; CI that cut release validation from two weeks to one.</li>
+			<li>Production C++: Voice Readiness Score and pin_id_status middleware; cached telematics APIs; modem/IPC/connectivity root causes and fixes.</li>
+			<li>Brought 5G NSA/SA onto Gen1; redesigned the cellular watchdog as an explicit state machine; owned P1 production escalations.</li>
+		</ul>
+
+		<h4>TUX audio — A2B compiler</h4>
+		<ul>
+			<li>Wrote a2bc: a two-way AD242x A2B toolchain with assembler-style source, compile/decompile backends, CI diagnostics, and source-map replay of opaque kernel bus errors.</li>
+		</ul>
+
+		<h4>Process ownership, agents &amp; documentation</h4>
+		<ul>
+			<li>Authored manufacturing TCU provisioning and eSIM lifecycle proposals; designed Harman shared-repository branch governance; controlled Polarion APN/PDN documentation.</li>
+			<li>Agent-based triage pipeline and Slack bot for unattended TCU ticket root cause; Argus dashboards; MCP/Cursor skills for release and eSIM workflows.</li>
+			<li>~60 Confluence reference pages; 100+ design/RCA docs; primary engineering liaison to Harman for ~5 years.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Impact metrics</h2>
+		<ul>
+			<li>Tenure: Feb 2021 – Present (~5 yr 8 mo)</li>
+			<li>Repositories: 6 (z2-tcu-dev, z2-tcu-profile-package, z2-meta-tcu, z2-tux-dev, zooxco/driving, zooxco/calibration)</li>
+			<li>Commits: 1,353 · PRs authored/merged: 750+ / 580+ · Reviews for others: 503</li>
+			<li>Jira: 1,332 resolved as assignee · 982 filed · 39 epics owned</li>
+			<li>Firmware shipped: 49 TCU · 22 TUX · Validation cycle: 2 weeks → 1 week</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Career direction</h2>
+		<p>Targeting Senior Embedded Middleware &amp; Automation Engineer: continuing the shift from test-only ownership into production firmware implementation, system architecture, and cross-organizational process leadership.</p>
+	</section>
 </article>
