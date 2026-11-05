@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="{{ page.description | default: site.description | escape }}">
+		<title>{{ page.title | default: site.name | escape }}</title>
+		<link rel="alternate" type="application/atom+xml" title="{{ site.name | escape }} Blog" href="{{ '/blog/atom.xml' | relative_url }}">
+		<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+	</head>
+	<body class="portfolio-page">
+		<a class="skip-link" href="#portfolio-main">Skip to content</a>
+		{{ content }}
+	</body>
+</html>

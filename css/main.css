@@ -1,0 +1,1200 @@
+body {
+  height: 100%;
+  background-color: #f4eee7;
+  background-image: none;
+  color: #332a25;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+ footer ul {
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0px;
+    padding-bottom: 5vh;
+    text-align:center;
+    list-style: none;
+    font-weight: bold;
+    background-color:#49372f;
+    font-size:2em;
+}
+nav ul{
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  padding: 0px;
+  padding-bottom: 15px;
+  text-align:center;
+  list-style: none;
+  font-weight: bold;
+  background-color:#49372f;
+  padding-top:0px;
+}
+
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    color:#79533f;
+}
+a:hover {
+    text-decoration: underline;
+}
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #332a25;
+    font-family: Georgia, serif;
+}
+h2{
+  text-align: center;
+  color: #49372f;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  font-family: Georgia, serif;
+}
+h3{
+  font-size:1.125rem;
+  text-align: center;
+  color:#49372f;
+  font-style:italic;
+}
+h4{
+  font-size: 1.5rem;
+  text-align: center;
+  color:#49372f;
+}
+p {
+    font-size: 1.125rem;
+    line-height: 1.65;
+    color:#332a25;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 0vw;
+    margin-left: 0vw;
+}
+
+.line{
+  width: 100vw;
+  height: 47px;
+  border-bottom: 5px solid #d8a891;
+  position: relative;
+  }
+
+footer {
+    border-top: 1px solid #d5d5d5;
+    min-height: 5rem;
+    font-size: .8em;
+}
+
+topnav {
+  background-color: green;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+background-color: #ddd;
+color: green;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+background-color: #4CAF50;
+color: white;
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+float: right;
+}
+
+
+ul.posts { 
+    margin: 20px auto 40px; 
+    font-size: 1.5em;
+}
+
+ul.posts li {
+    list-style: none;
+}
+
+img.displayed {
+    display: block;
+     }
+
+  #about {
+    /* padding-top: 5em; */
+    position: relative;
+    width: 100vw;
+    margin-left:-50vw;
+    left:50%;
+    min-height: 0rem;
+    height: 100vh;
+    padding-bottom: 5%;
+    /* opacity: 0.9; */
+    background-color:#dce8dc;
+    padding:100px;
+
+  }
+  #works {
+    /* padding-top: 5em; */
+    position: relative;
+    width: 100vw;
+    margin-left:-50vw;
+    left:50%;
+    min-height: 0rem;
+    height:158vh;
+    /* opacity: 0.9; */
+    background-color:#f1d8cc;
+    padding:100px;
+    /* padding-bottom: 20vh; */
+
+  }
+
+  #works_continued {
+    /* padding-top: 50vh; */
+    position: relative;
+    width: 100vw;
+    margin-left:-50vw;
+    left:50%;
+    min-height: 0rem;
+    height: 55vh;
+    /* opacity: 0.9; */
+    background-color:#f1d8cc;
+    padding:100px;
+
+  }
+  #extra {
+    /* padding-top: 5em; */
+    position: relative;
+    width: 100vw;
+    margin-left:-50vw;
+    left:50%;
+    min-height: 0rem;
+    height: 220vh;
+    padding-bottom: 5%;
+    /* opacity: 0.9; */
+    background-color:#d8e5eb;
+    padding:100px;
+
+  }
+  #quote {
+    /* padding-top: 5em; */
+    position: relative;
+    width: 100vw;
+    margin-left:-50vw;
+    left:50%;
+    min-height: 0rem;
+    height: 40vh;
+    padding-bottom: 5%;
+    /* opacity: 0.9; */
+    background-color:#eadfcf;
+    padding:100px;
+
+  }
+  P.blocktext{
+    margin-left:auto;
+    margin-right:auto;
+    width:8em;
+
+
+  }
+  .container {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+  }
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  div.hr {
+      border: 0;
+      width: 80%;
+      color: #f00;
+      background-color: #f00;
+      height: 5px;
+    }
+
+  div.hr hr {
+      display: none;
+    }
+    
+  #top-section{
+    /* padding-top: 5em; */
+    position: relative;
+    width: 100vw;
+    height: 70vh;
+    margin-left: -50vw;
+    left:50%;
+    min-height: 0rem;
+    color:white;
+    padding:100px; 
+    background:transparent;
+    margin-top: 35vh;
+
+  }
+  
+  .profilepic {
+    max-width: 500px;
+    max-height: 500px;
+  }
+  
+  #block {
+    padding-top: 5em;
+    position: relative;
+    width: 100vw;
+    margin-left: -50vw;
+    left:50%;
+    min-height: 0rem;
+  }
+
+  @keyframes text {
+    0%{
+      color: #000;
+      margin-bottom: -40px;
+    }
+    30%{
+      letter-spacing: 2rem;
+      margin-bottom: -40px;
+    }
+    85%{
+      letter-spacing: 0.8rem;
+      margin-bottom: -40px;
+    }
+  }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100%;
+  height: auto;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  padding: 0.65rem 1rem;
+  background: #49372f;
+  font: 500 0.95rem/1.4 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+.site-nav a {
+  padding: 0.35rem 0.5rem;
+}
+
+.site-nav a,
+footer a {
+  color: #f3dfd1;
+}
+
+.btn-info {
+  background-color: #79533f;
+  border-color: #79533f;
+  border-radius: 3px;
+  padding: 0.7rem 1.15rem;
+  font-size: 1rem;
+}
+
+.resume-status {
+  display: inline-block;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid #c9a894;
+  border-radius: 3px;
+  color: #f3dfd1;
+  font-size: 0.9rem;
+}
+
+.site-content {
+  width: 100%;
+  max-width: 100%;
+}
+
+#about,
+#works,
+#works_continued,
+#extra,
+#quote {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 0;
+  margin-left: 0;
+  margin-right: 0;
+  left: auto;
+  padding: clamp(1.25rem, 5vw, 4rem);
+}
+
+#top-section {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: min(76vh, 700px);
+  margin: 0;
+  left: auto;
+  padding: clamp(3rem, 9vw, 8rem);
+  display: flex;
+  align-items: center;
+  background: #49372f;
+  color: #f4eee7;
+}
+
+#top-section > section {
+  width: min(100%, 68rem);
+}
+
+#top-section h2 {
+  margin: 0 0 1rem !important;
+  color: #f3dfd1 !important;
+  font: 500 clamp(3rem, 7vw, 5.5rem)/1.05 Georgia, serif !important;
+  text-align: left;
+}
+
+#top-section .hero-title {
+  margin: 0 0 1rem !important;
+  color: #f3dfd1 !important;
+  font: 500 clamp(2.8rem, 6vw, 4.8rem)/1.05 Georgia, serif !important;
+  text-align: left;
+}
+
+#top-section .hero-title span {
+  color: #e7c8b5;
+}
+
+#top-section .hero-eyebrow,
+#top-section .hero-subtitle {
+  color: #e7c8b5;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+#top-section .hero-eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+#top-section .hero-subtitle {
+  margin: 0 0 1.5rem;
+  color: #f4eee7;
+  max-width: 38rem;
+  font-size: 1.15rem;
+}
+
+#top-section h3 {
+  margin: 0 0 0.75rem;
+  color: #e7c8b5;
+  font: 500 1.1rem/1.5 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  text-align: left;
+}
+
+#top-section h1 {
+  margin: 1.5rem 0;
+  color: #f4eee7;
+  font: 400 clamp(1.25rem, 2.5vw, 1.7rem)/1.4 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  text-align: left;
+}
+
+#top-section center {
+  text-align: left;
+}
+
+.profilepic {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+#extra img,
+#extra video {
+  max-width: 100%;
+  height: auto;
+}
+
+#extra .project-media {
+  display: block;
+  width: min(100%, 42rem);
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0 2rem;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+#extra > section > div {
+  width: min(100%, 74rem);
+  margin: 0 auto !important;
+}
+
+#extra h2 {
+  margin: 2.5rem 0 1rem;
+  font-size: 1.65rem;
+  text-align: left;
+}
+
+#extra br {
+  display: none;
+}
+
+#extra p {
+  max-width: 68ch;
+  font-size: 1.05rem;
+}
+
+#quote h2 {
+  max-width: 58rem;
+  margin: 0 auto 1rem;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  line-height: 1.35;
+}
+
+#quote .site-notice {
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.page {
+  width: min(100% - 2rem, 56rem);
+  margin: clamp(2rem, 7vw, 5rem) auto;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.prose {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.prose h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
+}
+
+.prose p,
+.prose li {
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+#about > section > div {
+  max-width: 68rem;
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.75fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: 1.5rem 3rem;
+  margin: 0 auto !important;
+}
+
+#about > section > div > h2 {
+  grid-column: 1 / -1;
+  margin: 0;
+  text-align: left !important;
+}
+
+#about > section > div > .col-xs-4,
+#about > section > div > .col-xs-10 {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+#about h2 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.8rem, 4vw, 2.7rem) !important;
+}
+
+#about img {
+  width: 100%;
+  max-width: 22rem;
+  max-height: 28rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  margin: 0 !important;
+  border-radius: 4px;
+}
+
+#about p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+#works section {
+  max-width: 74rem;
+  margin: 0 auto;
+}
+
+#works section > div[style*="margin-top"] {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin: 2rem auto 0 !important;
+}
+
+#works section > div[style*="margin-top"] > div,
+#works section > div[style*="padding-bottom"] > p > div {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+#works section > div[style*="padding-bottom"] {
+  padding-bottom: 0 !important;
+}
+
+#works section > div[style*="padding-bottom"] > p {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin: 0;
+}
+
+#works img {
+  width: 100%;
+  max-width: none;
+  max-height: 24rem;
+  object-fit: cover !important;
+  float: none !important;
+  margin: 0 !important;
+  border-radius: 4px;
+}
+
+#works h2,
+#quote h2 {
+  margin: 0 0 2rem;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+
+#works h3 {
+  font-size: 1.5rem !important;
+  font-style: normal;
+  text-align: left;
+}
+
+#works div[style*="font-size: 2em"] {
+  font-size: 1.125rem !important;
+  line-height: 1.65;
+}
+
+.prose .posts {
+  padding-left: 0;
+  font-size: 1rem;
+}
+
+.prose .posts li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.post-date {
+  color: #444;
+}
+
+.document-link {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border: 2px solid currentColor;
+  font-weight: bold;
+}
+
+.resume {
+  width: min(100% - 2rem, 54rem);
+  margin: 2rem auto;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  background: #fffdfa;
+  color: #332a25;
+  box-shadow: 0 8px 30px rgba(73, 55, 47, 0.1);
+  font: 0.95rem/1.5 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+.resume p,
+.resume li {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.resume h1,
+.resume h2,
+.resume h3,
+.resume p {
+  margin: 0;
+  text-align: left;
+}
+
+.resume-header {
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #79533f;
+}
+
+.resume-kicker {
+  color: #79533f;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.resume-header h1 {
+  margin-top: 0.35rem;
+  font: 500 clamp(2rem, 5vw, 3rem)/1.1 Georgia, serif;
+}
+
+.resume-header h1 span {
+  color: #79533f;
+}
+
+.resume-role {
+  margin-top: 0.4rem !important;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  margin-top: 0.85rem;
+  font-size: 0.85rem;
+}
+
+.resume-summary {
+  max-width: 47rem;
+  margin-top: 1rem !important;
+  color: #51453e;
+  font-size: 1rem !important;
+}
+
+.resume-section {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #d9c9bc;
+}
+
+.resume-section h2 {
+  margin-bottom: 0.85rem;
+  color: #79533f;
+  font: 700 0.82rem/1.3 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  text-transform: uppercase;
+}
+
+.resume-entry + .resume-entry {
+  margin-top: 1.1rem;
+}
+
+.resume-entry h3 {
+  font: 700 1rem/1.35 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+.resume-entry-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.resume-entry-heading p,
+.resume-entry-heading time {
+  color: #66594f;
+  font-size: 0.85rem;
+}
+
+.resume-entry ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+}
+
+.resume-entry li,
+.resume-entry > p,
+.resume-bottom p {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.resume-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 1.5rem;
+  border-bottom: 0;
+}
+
+@media print {
+  .site-nav,
+  footer {
+    display: none !important;
+  }
+
+  body,
+  .resume {
+    background: white;
+  }
+
+  .resume {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    font-size: 9.5pt;
+  }
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin: 0;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+  }
+
+  #top-section {
+    min-height: 68vh;
+    padding: 3rem 1.5rem;
+  }
+
+  #top-section .hero-title {
+    font-size: clamp(2.6rem, 12vw, 4rem) !important;
+  }
+
+  #about > section > div {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  #about > section > div {
+    margin: 1rem 0 !important;
+  }
+
+  #about > section > div > h2 {
+    grid-column: auto;
+  }
+
+  #about img,
+  #works img {
+    float: none !important;
+    margin: 1rem auto !important;
+  }
+
+  #about img {
+    max-width: min(100%, 19rem);
+  }
+
+  #works h4 {
+    font-size: 1.75rem !important;
+  }
+
+  #works section > div[style*="margin-top"],
+  #works section > div[style*="padding-bottom"] > p {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  #extra > section > div {
+    margin: 0 !important;
+  }
+
+  #extra img,
+  #extra video {
+    width: 100% !important;
+    margin: 1rem 0 !important;
+  }
+
+  #quote h2 {
+    font-size: 1.5rem;
+  }
+
+  .resume-entry-heading,
+  .resume-bottom {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
+
+.portfolio-page {
+  min-height: 100vh;
+  background: #f4eee7;
+  color: #332a25;
+}
+
+.portfolio-page a {
+  color: #79533f;
+}
+
+.portfolio-page a:focus-visible {
+  outline: 2px solid #79533f;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 10;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  transform: translateY(-180%);
+  background: #49372f;
+  color: #fffdfa !important;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.portfolio-layout {
+  display: grid;
+  grid-template-columns: minmax(17rem, 0.78fr) minmax(0, 1.22fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  width: min(100%, 1440px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 7vw, 6rem);
+}
+
+.portfolio-rail {
+  position: sticky;
+  top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  min-height: calc(100vh - 6rem);
+}
+
+.portfolio-identity {
+  color: #49372f !important;
+  text-decoration: none;
+}
+
+.portfolio-identity h1 {
+  margin: 0;
+  font: 500 clamp(2.6rem, 4vw, 3.6rem)/1.05 Georgia, serif;
+  text-align: left;
+}
+
+.portfolio-role {
+  margin: 0.85rem 0 0.25rem;
+  color: #49372f;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.portfolio-focus {
+  margin: 0;
+  color: #79533f;
+  font-size: 0.9rem;
+}
+
+.portfolio-intro {
+  max-width: 31rem;
+  margin: 1.4rem 0 0;
+  color: #5a4c43;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.portfolio-rail .resume-status {
+  align-self: start;
+  margin-top: 1.2rem;
+  border-color: #c9a894;
+  color: #79533f;
+}
+
+.portfolio-nav {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 2.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid #c9a894;
+}
+
+.portfolio-nav a {
+  color: #66594f;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+
+.portfolio-nav a:hover,
+.portfolio-social a:hover {
+  color: #49372f;
+}
+
+.portfolio-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.1rem;
+  margin: auto 0 0;
+  padding: 2rem 0 0;
+  list-style: none;
+}
+
+.portfolio-social a,
+.portfolio-footer a {
+  color: #79533f;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.portfolio-content {
+  min-width: 0;
+  max-width: 60rem;
+  padding-top: 1rem;
+}
+
+.portfolio-section {
+  scroll-margin-top: 2rem;
+  padding: 1.5rem 0 3.5rem;
+  border-bottom: 1px solid #d9c9bc;
+}
+
+.portfolio-page #about {
+  position: static;
+  width: auto;
+  min-height: 0;
+  height: auto;
+  margin: 0;
+  padding: 1.5rem 0 3.5rem;
+  left: auto;
+  background: transparent;
+}
+
+.portfolio-section + .portfolio-section {
+  padding-top: 3.5rem;
+}
+
+.portfolio-section h2 {
+  margin: 0 0 1.75rem;
+  color: #49372f;
+  font: 500 clamp(1.8rem, 3vw, 2.35rem)/1.2 Georgia, serif;
+  text-align: left;
+}
+
+.section-kicker {
+  margin: 0 0 0.65rem;
+  color: #79533f;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.68fr) minmax(0, 1.32fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.about-grid img {
+  display: block;
+  width: 100%;
+  max-height: 24rem;
+  aspect-ratio: 4 / 5;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.about-grid h2 {
+  margin-bottom: 1rem;
+}
+
+.about-grid p,
+.experience-detail p,
+.experience-detail li,
+.project-entry p {
+  color: #51453e;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.experience-entry {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: 1.6rem 0;
+  border-top: 1px solid #d9c9bc;
+}
+
+.experience-heading h3,
+.project-entry h3 {
+  margin: 0;
+  color: #49372f;
+  font: 600 1.1rem/1.35 "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  text-align: left;
+}
+
+.experience-heading p {
+  margin: 0.4rem 0 0;
+  color: #79533f;
+  font-size: 0.9rem;
+}
+
+.experience-heading time {
+  display: block;
+  margin-top: 0.35rem;
+  color: #66594f;
+  font-size: 0.85rem;
+}
+
+.experience-detail p {
+  margin: 0;
+}
+
+.experience-detail ul {
+  margin: 0.8rem 0 0;
+  padding-left: 1.1rem;
+}
+
+.experience-detail ul + p {
+  margin-top: 1rem;
+}
+
+.experience-detail li + li {
+  margin-top: 0.4rem;
+}
+
+.project-entry {
+  display: grid;
+  grid-template-columns: minmax(11rem, 0.75fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: 1.5rem 0;
+  border-top: 1px solid #d9c9bc;
+}
+
+.project-entry > img,
+.project-entry > video {
+  display: block;
+  width: 100%;
+  max-height: 18rem;
+  aspect-ratio: 4 / 3;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.project-entry > video {
+  object-fit: contain;
+  background: #e8dfd5;
+}
+
+.project-entry h3 {
+  margin-bottom: 0.6rem;
+}
+
+.project-entry p {
+  margin: 0;
+}
+
+.project-entry .project-skills {
+  margin-top: 0.8rem;
+  color: #79533f;
+  font-size: 0.85rem;
+}
+
+.portfolio-footer {
+  padding: 1.5rem 0 3rem;
+  color: #66594f;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 850px) {
+  .portfolio-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem clamp(1.25rem, 5vw, 3rem);
+  }
+
+  .portfolio-rail {
+    position: static;
+    min-height: 0;
+  }
+
+  .portfolio-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.25rem;
+    margin-top: 1.5rem;
+    padding: 0;
+    border: 0;
+  }
+
+  .portfolio-social {
+    margin: 1.5rem 0 0;
+    padding: 0;
+  }
+
+  .portfolio-content {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .portfolio-layout {
+    padding: 1.5rem 1.1rem;
+  }
+
+  .portfolio-identity h1 {
+    font-size: 2.7rem;
+  }
+
+  .portfolio-intro {
+    font-size: 0.95rem;
+  }
+
+  .about-grid,
+  .experience-entry,
+  .project-entry {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+
+  .about-grid img {
+    width: min(100%, 15rem);
+    max-height: none;
+  }
+
+  .project-entry > img,
+  .project-entry > video {
+    width: min(100%, 24rem);
+  }
+
+  .portfolio-section {
+    padding-bottom: 2.25rem;
+  }
+
+  .portfolio-section + .portfolio-section {
+    padding-top: 2.25rem;
+  }
+}

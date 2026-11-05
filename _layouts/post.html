@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<article class="page prose blog-post">
+	<p class="post-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time></p>
+	<h1>{{ page.title | escape }}</h1>
+	{{ content }}
+	<p><a href="{{ '/blog/' | relative_url }}">Back to Blog</a></p>
+</article>

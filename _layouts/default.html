@@ -1,0 +1,168 @@
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="description" content="{{ page.description | default: site.description | escape }}">
+			<title>{{ page.title | default: site.name | escape }}</title>
+			<link rel="alternate" type="application/atom+xml" title="{{ site.name | escape }} Blog" href="{{ '/blog/atom.xml' | relative_url }}">
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+			<link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+		</head>
+		<body>
+			<nav class="site-nav" aria-label="Main navigation">
+				<a href="{{ '/' | relative_url }}">Home</a>
+				<a href="{{ '/about/' | relative_url }}">About</a>
+				<a href="{{ '/blog/' | relative_url }}">Blog</a>
+			</nav>
+			<main class="site-content">
+			{% if page.url == '/' %}
+				<section aria-hidden="true" style="background-image: url('{{ '/img/black.jpg' | relative_url }}');background-repeat: no-repeat;z-index: -1000;
+				background-size: cover;position: fixed; top: 0; left: 0; min-width: 100%; min-height: 100%;"></section>
+				<div class = "container-fluid" id = 'top-section'>
+						<section>
+								<p class="hero-eyebrow">Software · Embedded Systems · Middleware</p>
+								<h1 class="hero-title">Thuta <span>(Zack)</span> Aung</h1>
+								<p class="hero-subtitle">I'm Zack Chen, a software engineer passionate about building custom embedded products. At Zoox, I worked on telematics and audio integration, including bring-up across two generations of cellular modems. Previously, I helped develop low-power IoT devices and monitoring systems for underwater equipment at a startup.</p>
+								<span class="resume-status" role="status">Résumé under construction</span>
+								</div>
+							</section>
+					</div>
+
+				
+			<!-- About -->
+				<div class = "row container-fluid" id = 'about'>
+					<section>
+						<div style="margin-top:15vh; margin-left:10vw;margin-right:10vw;">
+								<h2 style="font-size:2.5em; padding-bottom:0.5em;text-align: center;color:#79533f;"> A little bit about me...</h2>
+							<!-- <div class = "row"> -->
+								<div class = "col-xs-4 col-sm-4 col-lg-4">
+									<img class="profilepic img-fluid rounded" src="{{ '/img/profile-jiufen.jpg' | relative_url }}" alt="Zack at Jiufen Old Street in Taiwan" height="800" width="600" style="object-fit:cover;float:left; margin: 10px 100px 0px 0px;">
+									</div>
+
+								<div class = "col-xs-10 col-sm-10 col-lg-10">
+								<p class="font-weight-normal mb-5" >
+										<!-- <h2>Modern embedded systems like IoT and LPWAN are changing fast, and I want to be in the driver's seat in making the change happen</h2> -->
+									Welcome! My name is Thuta Aung, but you can call me Zack. I earned a BSE in computer engineering from the University of Michigan. My work focuses on firmware and low-level software for low-power embedded systems.
+									<br><br>
+
+										My experience includes embedded sensing research and co-founding BridgeBurma, where I led marketing and user research.
+									
+									</p>
+									</div>
+								</div>
+							<!-- </div> -->
+						</section>
+					</div>
+
+				<div class = "row container-fluid" id = 'works'>
+						<section>
+							
+								<h2>My past works... </h2>
+								<div style="margin-top:10vh; margin-left:0vw;margin-right:0vw;">
+											
+										<div class = "col-xs col-sm col-lg">
+											<img class="profilepic img-fluid rounded" src="{{ '/img/pro.JPG' | relative_url }}" alt="The Smart Sensor Interface project team in the lab" height="600" width="800" style="object-fit:fill;float:left; margin: 10px 100px 0px 0px;">
+											</div>
+											<div class = "col col-xs col-sm col-lg">
+											<p>
+												<h3 style="text-align:left;font-weight:bold;font-size: 3em;">Smart Sensor Interface</h3>
+												<div style="font-size: 2em;color:black">
+														This project describes an Internet-of-Things sensor interface that converts bare sensors and manual sensing systems into automated, wireless sensing systems. It has the goal of supporting a very wide range of sensing applications, implying the need for a very general design. The sensing system has several novel design features dictated by the application requirements including automated calibration to compensate for process variation and temperature dependence of components within the sensing system.
+											<br><br>
+			
+												Key skills used: ANSI-C, C++, Python, MATLAB, Eagle, PCB prototyping, Cellular Communication, UART, SPI, I2C, Logic Analyzer, FreeRTOS, Atmel Studios.
+												</div>
+											
+												</p>
+												</div>
+								</div>
+									
+									
+						</section>
+						<!-- <div class="w-0"></div> -->
+						<section>
+								<div style="padding-bottom: 10vh;">
+								<p>
+										<div class = "col-xs col-sm col-lg">
+									<img class="profilepic img-fluid rounded" src="{{ '/img/vest.jpg' | relative_url }}" alt="The Spinosaurus wearable vest with its attached sensors and wiring" height="800" width="600" style="object-fit:cover;float:right; margin: 10px 100px 100px 100px;">
+											</div>
+											<div class = "col-xs col-sm col-lg">
+										<h3 style="text-align:left;font-weight:bold;font-size: 3em;">Spinosaurus</h3>
+										<div style="font-size: 2em;color:black;">
+											The proposed goal of our wearable Spinosaurus was to provide weightlifters feedback on their back form while squatting and deadlifting. It is comprised of a vest (the SpineAligner) that stretches across the spin and an Android phone app. The vest has the ability to measure the orientation of
+											the user's back with three inertial measurment units (IMUs) and then communicates with the phone app to display visual feedback.
+									<br><br>
+									Key skills used: PCB designing, debugging and validation, BlueTooth, Android App, SPI, UART, Eagle, and Arduino.
+										</div>
+									</div>
+								</p>
+								</div>
+						</section>
+
+
+				</div>
+				<div id = 'extra'>
+						<section>
+								<div style = "margin-left:20vw;margin-right:20vw;">
+										<h2>BridgeBurma</h2>
+									<img class="project-media" src="{{ '/img/bb.JPG' | relative_url }}" alt="BridgeBurma community website homepage">
+							
+								<p class="font-weight-normal mb-5">
+
+									
+									<p>Aiming to mitigate the effects of braindrain in Myanmar, <a href="https://www.bridgeburma.com">BridgeBurma</a> was founded by four passionate college
+										students in 2018. Gaining an audience of over a thousand individuals within little over a year, we aim to share collective wisdom between
+										Burmese individuals all across the world.<br><br>
+
+										Our primary service is an online forum with side features such as direct chatting with our mentors/scholars.<br><br>
+
+										Within our community, we strongly promote self-development and firmly believes that everyone deserves an equal opportunity at pursuing higher
+										education regardless of their backgrounds.
+									<div style="font-size:3em;color:black"><center>
+										"For students, by students"- BridgeBurma
+									</center>
+									</div>
+
+									</p>
+									<br><br><br><br><br><br><br><br>
+
+
+									<h2>Yet Another Sparkle!</h2>
+									<video class="project-media" controls>
+											<source src="{{ '/img/YAS.mp4' | relative_url }}" type="video/mp4">
+										  Your browser does not support the video tag.
+									</video> 
+									
+									<p>
+									Yet Another Sparkle (YAS) is a community organization established on 14th March 2014 by a group of students in pursue of a simple dream: help those in need. As youths of 21st century we believe, our energy and compassion are the best assets we possess to bring smiles onto those who cry, to shed light onto those who lost hope and to help them believe tomorrow will be a better today. 
+										</p>
+								</p>
+								</div>
+						</section>
+				</div>
+			
+				<div class = "container-fluid" id = 'quote'>
+						<section>
+								<h2>“For every reason it’s not possible, there are hundreds of people who have faced the same circumstances and succeeded.” – Jack Canfield
+								</h2>
+									<p class="site-notice">Website updates are in progress.</p>
+
+						</section>
+				</div>
+			{% else %}
+				{{ content }}
+			{% endif %}
+			</main>
+
+			<footer>
+					<ul>
+						<li><a href="https://www.linkedin.com/in/thuta-aung-909a22114">linkedin</a></li>
+						<li><a href="https://github.com/thuthazack">github.com/thuthazack</a></li>
+										<li><a href="mailto:zachen.official@gmail.com">zachen.official@gmail.com</a></li>
+						<li><a href="tel:734-892-7450">(734)-892-7450</a></li>
+					</ul>
+				</footer>
+			</body>
+		
+	</html>
