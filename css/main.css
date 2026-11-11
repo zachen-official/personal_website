@@ -2,12 +2,34 @@
   --font-sans: "Libre Franklin", "Segoe UI", sans-serif;
 }
 
+html {
+  font-family: var(--font-sans);
+}
+
 body {
   height: 100%;
   background-color: #f4eee7;
   background-image: none;
   color: #332a25;
-  font-family: "Libre Franklin", "Segoe UI", sans-serif;
+  font-family: var(--font-sans) !important;
+}
+
+/* Override Bootstrap / browser defaults on every surface, including résumés */
+body,
+body *,
+.portfolio-page,
+.portfolio-page *,
+.page,
+.page *,
+.prose,
+.prose *,
+.resume-page,
+.resume-page *,
+.resume-chooser,
+.resume-chooser *,
+h1, h2, h3, h4, h5, h6,
+p, li, a, span, time, nav, button, input, select, textarea {
+  font-family: var(--font-sans) !important;
 }
  footer ul {
     font-family: "Libre Franklin", "Segoe UI", sans-serif;
@@ -57,7 +79,8 @@ h3{
   font-size:1.125rem;
   text-align: center;
   color:#49372f;
-  font-style:italic;
+  font-style: normal;
+  font-weight: 600;
 }
 h4{
   font-size: 1.5rem;
@@ -1185,25 +1208,43 @@ footer ul {
   line-height: 1.65;
 }
 
+.resume-page {
+  font-family: var(--font-sans) !important;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
 .resume-page .resume-header {
   margin-bottom: 2rem;
+}
+
+.resume-page .resume-header h1 {
+  font-family: var(--font-sans) !important;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .resume-page .resume-title {
   margin-top: 0.35rem;
   color: #79533f;
   font-size: 1.05rem;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .resume-page .resume-contact {
   margin-top: 0.5rem;
   font-size: 0.95rem;
+  font-weight: 400;
 }
 
 .resume-page h2 {
   margin-top: 2rem;
   text-align: left;
   font-size: 1.35rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: -0.01em;
 }
 
 .resume-page h3 {
@@ -1211,6 +1252,7 @@ footer ul {
   text-align: left;
   font-style: normal;
   font-size: 1.05rem;
+  font-weight: 600;
   color: #332a25;
 }
 
@@ -1218,7 +1260,15 @@ footer ul {
   margin: 1.1rem 0 0.4rem;
   text-align: left;
   font-size: 0.95rem;
+  font-weight: 500;
+  font-style: normal;
   color: #79533f;
+}
+
+.resume-page p,
+.resume-page li {
+  font-weight: 400;
+  font-style: normal;
 }
 
 .resume-page ul {
