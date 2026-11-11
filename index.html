@@ -9,7 +9,7 @@ description: Zack Chen builds production middleware, firmware build systems, and
 			<h1>Zack Chen</h1>
 		</a>
 		<p class="portfolio-role">Software Development Engineer</p>
-		<p class="portfolio-focus">Firmware · Middleware · Build Systems</p>
+		<p class="portfolio-focus">Firmware · Middleware · Audio · Build Systems</p>
 		<p class="portfolio-intro">Software development engineer with ~6 years on telematics and in-vehicle audio — writing production C++ middleware, Python build and provisioning systems, and a compiler toolchain for an automotive audio bus.</p>
 		<p class="resume-status" role="status"><a href="{{ '/cv/' | relative_url }}">View résumé</a></p>
 		<nav class="portfolio-nav" aria-label="Page sections">
@@ -50,7 +50,11 @@ description: Zack Chen builds production middleware, firmware build systems, and
 				</article>
 				<article class="skill-block">
 					<h3>Embedded &amp; systems</h3>
-					<p>Yocto/BitBake, systemd, POSIX IPC and shared memory, coredump and register-level crash analysis, kernel driver interfaces, iptables/conntrack, Linux bridges and 802.1q VLANs, hostapd, automotive audio bus configuration, PulseAudio, DLT logging, oFono / D-Bus / RIL, serial/syslog triage, tcpdump.</p>
+					<p>Yocto/BitBake, systemd, POSIX IPC and shared memory, coredump and register-level crash analysis, kernel driver interfaces, iptables/conntrack, Linux bridges and 802.1q VLANs, hostapd, DLT logging, oFono / D-Bus / RIL, serial/syslog triage, tcpdump.</p>
+				</article>
+				<article class="skill-block">
+					<h3>Audio</h3>
+					<p>In-vehicle audio debugging with Audacity, PulseAudio, ALSA, and the A2B bus — primarily for bring-up, signal-path triage, and validating microphone / voice paths.</p>
 				</article>
 				<article class="skill-block">
 					<h3>Cellular, build &amp; automation</h3>
@@ -77,10 +81,10 @@ description: Zack Chen builds production middleware, firmware build systems, and
 						<li>Redesigned the cellular watchdog as an explicit state machine with named transitions and trace streaming; cut the watchdog timer from 2 minutes to 45 seconds.</li>
 						<li>Added hardware pin-identification diagnostics to the REST status endpoint and telemetry cache; root-caused memory and IPC faults from coredumps and register state; delivered modem and IMS profile fixes across carriers.</li>
 					</ul>
-					<p><strong>Compiler and language toolchain</strong></p>
+					<p><strong>Audio &amp; A2B tooling</strong></p>
 					<ul>
-						<li>Wrote a two-way compiler for an automotive audio bus that configures microphone chains: assembler-style source language, compile to packed binary for the kernel driver, and decompile back to readable source.</li>
-						<li>CI-friendly diagnostics (file:line:severity, exit code = error count) and a source-map mechanism that replays opaque driver error codes as annotated source lines.</li>
+						<li>Debugged in-vehicle audio paths with Audacity, PulseAudio, ALSA, and the A2B bus — microphone/voice bring-up, signal-path triage, and capture analysis.</li>
+						<li>Wrote a two-way compiler for an A2B microphone-chain config: assembler-style source, compile to packed binary for the kernel driver, decompile back to readable source, and source-map replay of opaque driver errors.</li>
 					</ul>
 					<p><strong>Build, release &amp; deploy architecture</strong></p>
 					<ul>

@@ -20,9 +20,10 @@ description: Backend / platform résumé for Zack Chen — Services, APIs & Buil
 		<h2>Core technical areas</h2>
 		<p><strong>Services &amp; APIs</strong> — REST API design, versioning, and migration; gRPC; mTLS and certificate management; JSON schema and config loading; protobuf schema design; contract testing in CI; third-party API client design; pybind11 bindings across the Python/C++ boundary.</p>
 		<p><strong>Distributed systems &amp; reliability</strong> — declared-versus-observed state reconciliation, cache coherency and invalidation, read-after-write consistency, idempotency and bounded retry, rollback and graceful degradation, push-based event propagation, fault isolation, single-point-of-failure analysis and mitigation planning.</p>
-		<p><strong>Languages</strong> — Python (service clients, CLIs, build systems, and test frameworks; multi-thousand-line packages as sole author), C++ (production services, gTest), Bash; compiler tooling for an automotive audio bus (codegen, decompilation, source maps, diagnostics).</p>
+		<p><strong>Languages</strong> — Python (service clients, CLIs, build systems, and test frameworks; multi-thousand-line packages as sole author), C++ (production services, gTest), Bash.</p>
 		<p><strong>Infrastructure &amp; delivery</strong> — Bazel, Docker, CI pipeline design and parallelization, artifact-repository publishing, cryptographic artifact signing, reproducible builds pinned by commit, release automation, observability dashboards, structured logging, pre-commit tooling.</p>
 		<p><strong>Systems</strong> — Linux: systemd, POSIX IPC and shared memory, D-Bus, netfilter/iptables, bridges and 802.1q VLANs, Yocto/BitBake; coredump and register-level crash analysis, tcpdump.</p>
+		<p><strong>Audio</strong> — Debugged in-vehicle audio paths with Audacity, PulseAudio, ALSA, and the A2B bus; A2B compiler tooling for microphone-chain configuration.</p>
 	</section>
 
 	<section>
@@ -74,9 +75,10 @@ description: Backend / platform résumé for Zack Chen — Services, APIs & Buil
 			<li>Built diagnostics dashboards, an MCP server for the test-management system, build-and-publish automation, and a daily-journal service summarizing issue-tracker activity.</li>
 		</ul>
 
-		<h4>Compiler and language toolchain</h4>
+		<h4>Audio debugging and A2B tooling</h4>
 		<ul>
-			<li>Wrote a two-way compiler for an automotive audio bus: assembler-style source language, compile/decompile backends, CI-friendly diagnostics, and source-map replay of opaque driver error codes.</li>
+			<li>Debugged in-vehicle audio with Audacity, PulseAudio, ALSA, and the A2B bus — primarily for bring-up and signal-path triage.</li>
+			<li>Wrote a two-way A2B compiler for microphone-chain config: assembler-style source, compile/decompile backends, CI-friendly diagnostics, and source-map replay of opaque driver error codes.</li>
 		</ul>
 
 		<h4>Technical leadership</h4>

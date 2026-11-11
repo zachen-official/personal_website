@@ -18,9 +18,10 @@ description: Embedded / firmware résumé for Zack Chen — Software Development
 
 	<section>
 		<h2>Core technical areas</h2>
-		<p><strong>Embedded &amp; systems</strong> — Yocto/BitBake, systemd, POSIX IPC/shared memory, coredump and register-level crash analysis, kernel driver interfaces, iptables/conntrack, Linux bridges/VLANs, hostapd, automotive audio bus, PulseAudio, DLT, oFono / D-Bus / RIL, serial/syslog, tcpdump.</p>
+		<p><strong>Embedded &amp; systems</strong> — Yocto/BitBake, systemd, POSIX IPC/shared memory, coredump and register-level crash analysis, kernel driver interfaces, iptables/conntrack, Linux bridges/VLANs, hostapd, DLT, oFono / D-Bus / RIL, serial/syslog, tcpdump.</p>
+		<p><strong>Audio</strong> — In-vehicle audio debugging with Audacity, PulseAudio, ALSA, and the A2B bus; primarily for bring-up, signal-path triage, and microphone / voice-path validation. A2B compiler tooling (codegen, decompilation, source maps, diagnostics).</p>
 		<p><strong>Cellular &amp; telecom</strong> — LTE and 5G NSA/SA, eSIM under GSMA SGP.02 and SGP.32, eUICC profile management, APN/PDN and IMS, multi-carrier US MNO integration, modem log analysis.</p>
-		<p><strong>Languages &amp; implementation</strong> — C++ (production middleware, gTest), Python (services, build systems, CLIs, test frameworks), Bash; REST/gRPC, mTLS, JSON schema, pybind11; compiler tooling for an automotive audio bus (codegen, decompilation, source maps, diagnostics).</p>
+		<p><strong>Languages &amp; implementation</strong> — C++ (production middleware, gTest), Python (services, build systems, CLIs, test frameworks), Bash; REST/gRPC, mTLS, JSON schema, pybind11.</p>
 		<p><strong>Build, release &amp; automation</strong> — Bazel, Docker, Git, Bamboo CI, signed release pipelines, programmable telephony APIs, MCP servers and agent tooling, TestRail.</p>
 	</section>
 
@@ -30,7 +31,7 @@ description: Embedded / firmware résumé for Zack Chen — Software Development
 		<ul>
 			<li>Designed and shipped a cellular voice-readiness scoring feature end to end (algorithm, service, JSON config, NSA/SA detection, telemetry cache, gTest) with fail-safe REST semantics for 5G-SA voice routing.</li>
 			<li>Redesigned the cellular watchdog as an explicit state machine with trace streaming (timer cut 2 min → 45 s); root-caused memory/IPC faults from coredumps and fixed modem, IMS, and PCIe/DMA issues on an automotive SoC.</li>
-			<li>Wrote a two-way compiler for an automotive audio bus (assembler-style source, compile/decompile, CI diagnostics, source-map replay of opaque driver errors).</li>
+			<li>Debugged in-vehicle audio with Audacity, PulseAudio, ALSA, and the A2B bus; wrote a two-way A2B compiler (assembler-style source, compile/decompile, CI diagnostics, source-map replay of opaque driver errors).</li>
 			<li>Brought up eSIM on two generations (GSMA SGP.02 and SGP.32); wrote a factory-safe SIM-identity CLI and a ~1,900-line carrier-platform client/CLI; led 5G NSA/SA enablement through field validation.</li>
 			<li>Built the fleet firmware flashing and signed deploy-artifact system; release captain for 49 telematics and 22 audio firmware versions; own the OTA configure-and-provision contract across four repositories.</li>
 			<li>Sole owner of the telematics validation framework from first commit (430+ PRs); agent-based triage tooling; primary Tier-1 supplier liaison ~5 years.</li>
