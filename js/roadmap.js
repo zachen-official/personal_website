@@ -1,29 +1,27 @@
 (function () {
-  var root = document.getElementById("experience");
-  if (!root) return;
-
-  var stops = Array.prototype.slice.call(root.querySelectorAll(".roadmap-stop"));
-  var panels = Array.prototype.slice.call(root.querySelectorAll(".roadmap-panel"));
+  var stops = document.querySelectorAll(".roadmap-stop");
+  var panels = document.querySelectorAll(".roadmap-panel");
   var progress = document.getElementById("roadmap-progress");
+  if (!stops.length || !panels.length) return;
 
   function setProgress(value) {
     if (!progress) return;
-    var amount = Number(value);
-    if (isNaN(amount)) amount = 100;
-    progress.style.strokeDashoffset = String(100 - Math.max(0, Math.min(100, amount)));
+    var pct = Math.max(0, Math.min(100, Number(value) || 0));
+    progress.style.strokeDasharray = "100";
+    progress.style.strokeDashoffset = String(100 - pct);
   }
 
   function activate(stop) {
     var panelId = stop.getAttribute("data-panel");
-    stops.forEach(function (item) {
-      var active = item === stop;
-      item.classList.toggle("is-active", active);
-      item.setAttribute("aria-pressed", active ? "true" : "false");
+    stops.forEach(function (el) {
+      var on = el === stop;
+      el.classList.toggle("is-active", on);
+      el.setAttribute("aria-pressed", on ? "true" : "false");
     });
     panels.forEach(function (panel) {
-      var show = panel.id === panelId;
-      panel.classList.toggle("is-visible", show);
-      if (show) {
+      var on = panel.id === panelId;
+      panel.classList.toggle("is-visible", on);
+      if (on) {
         panel.removeAttribute("hidden");
       } else {
         panel.setAttribute("hidden", "");
@@ -38,13 +36,14 @@
       activate(stop);
     });
     stop.addEventListener("keydown", function (event) {
-      if (event.key !== "Enter" && event.key !== " ") return;
       if (event.target.closest("a")) return;
-      event.preventDefault();
-      activate(stop);
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        activate(stop);
+      }
     });
   });
 
-  var initial = root.querySelector(".roadmap-stop.is-active") || stops[stops.length - 1];
-  if (initial) activate(initial);
+  var initial = document.querySelector(".roadmap-stop.is-active") || stops[stops.length - 1];
+  activate(initial);
 })();
