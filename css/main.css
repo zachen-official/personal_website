@@ -31,8 +31,8 @@ h1, h2, h3, h4, h5, h6,
 p, li, a, span, time, nav, button, input, select, textarea {
   font-family: var(--font-sans) !important;
 }
- footer ul {
-    font-family: "Libre Franklin", "Segoe UI", sans-serif;
+footer ul {
+    font-family: var(--font-sans) !important;
     padding: 0px;
     padding-bottom: 5vh;
     text-align:center;
@@ -41,8 +41,19 @@ p, li, a, span, time, nav, button, input, select, textarea {
     background-color:#49372f;
     font-size:2em;
 }
+
+.navbar,
+.navbar *,
+.nav,
+.nav *,
+.navbar-nav,
+.navbar-nav *,
+.navbar-brand,
+.nav-link {
+  font-family: var(--font-sans) !important;
+}
 nav ul{
-  font-family: "Libre Franklin", "Segoe UI", sans-serif;
+  font-family: var(--font-sans) !important;
   padding: 0px;
   padding-bottom: 15px;
   text-align:center;
@@ -117,6 +128,11 @@ topnav {
 }
 
 /* Style the links inside the navigation bar */
+.topnav,
+.topnav a {
+  font-family: var(--font-sans) !important;
+}
+
 .topnav a {
 float: left;
 color: #f2f2f2;
@@ -124,6 +140,7 @@ text-align: center;
 padding: 14px 16px;
 text-decoration: none;
 font-size: 17px;
+font-weight: 500;
 }
 
 /* Change the color of links on hover */
@@ -329,16 +346,23 @@ body {
   gap: 0.25rem 1.25rem;
   padding: 0.65rem 1rem;
   background: #49372f;
-  font: 500 0.95rem/1.4 "Libre Franklin", "Segoe UI", sans-serif;
+  font-family: var(--font-sans) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
 }
 
 .site-nav a {
   padding: 0.35rem 0.5rem;
+  font-family: var(--font-sans) !important;
+  font-weight: 500;
 }
 
 .site-nav a,
 footer a {
   color: #f3dfd1;
+  font-family: var(--font-sans) !important;
 }
 
 .btn-info {
@@ -967,11 +991,15 @@ footer ul {
   margin-top: 2.5rem;
   padding-left: 1rem;
   border-left: 1px solid #c9a894;
+  font-family: var(--font-sans) !important;
 }
 
 .portfolio-nav a {
   color: #66594f;
+  font-family: var(--font-sans) !important;
   font-size: 0.92rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   text-decoration: none;
 }
 
@@ -987,10 +1015,13 @@ footer ul {
   margin: auto 0 0;
   padding: 2rem 0 0;
   list-style: none;
+  font-family: var(--font-sans) !important;
 }
 
 .portfolio-social a,
 .portfolio-footer a {
+  font-family: var(--font-sans) !important;
+  font-weight: 500;
   color: #79533f;
   font-size: 0.9rem;
   text-decoration: none;
