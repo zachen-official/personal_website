@@ -66,13 +66,89 @@ description: Zack Chen builds production middleware, firmware build systems, and
 		<section id="experience" class="portfolio-section">
 			<p class="section-kicker">03 / Experience</p>
 			<h2>Where I’ve worked</h2>
-			<article class="experience-entry">
-				<div class="experience-heading">
-					<h3><a href="https://zoox.com/" target="_blank" rel="noopener noreferrer">Zoox</a></h3>
-					<p>Software Development Engineer · Firmware / Telematics</p>
-					<time datetime="2021-02">Feb 2021 – Present</time>
-				</div>
-				<div class="experience-detail">
+			<p class="roadmap-hint">Follow the path — select a stop to open that chapter.</p>
+
+			<div class="roadmap-map" aria-label="Career roadmap">
+				<svg class="roadmap-svg" viewBox="0 0 1000 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+					<path class="roadmap-path-base" d="M 90 70 C 280 40, 420 120, 520 170 C 650 235, 780 210, 880 160 C 960 120, 920 280, 780 320 C 620 370, 380 390, 160 350" fill="none"></path>
+					<path id="roadmap-progress" class="roadmap-path-progress" d="M 90 70 C 280 40, 420 120, 520 170 C 650 235, 780 210, 880 160 C 960 120, 920 280, 780 320 C 620 370, 380 390, 160 350" fill="none" pathLength="100"></path>
+				</svg>
+
+				<ol class="roadmap-stops">
+					<li class="roadmap-stop-wrap" style="--x: 9%; --y: 12%;">
+						<div class="roadmap-stop" role="button" tabindex="0" data-panel="exp-umich" data-progress="18" aria-pressed="false" aria-controls="exp-umich">
+							<span class="roadmap-node" aria-hidden="true"></span>
+							<span class="roadmap-step">01</span>
+							<h3><a href="https://umich.edu/" target="_blank" rel="noopener noreferrer">University of Michigan</a></h3>
+							<p>Research Assistant · Smart Sensor Interface</p>
+							<time datetime="2018-04/2020-06">Apr 2018 – Jun 2020</time>
+						</div>
+					</li>
+					<li class="roadmap-stop-wrap" style="--x: 78%; --y: 34%;">
+						<div class="roadmap-stop" role="button" tabindex="0" data-panel="exp-evigia" data-progress="55" aria-pressed="false" aria-controls="exp-evigia">
+							<span class="roadmap-node" aria-hidden="true"></span>
+							<span class="roadmap-step">02</span>
+							<h3><a href="https://evigia.com/" target="_blank" rel="noopener noreferrer">Evigia Systems</a></h3>
+							<p>Embedded Software Engineer</p>
+							<time datetime="2019-10/2020-08">Oct 2019 – Aug 2020</time>
+						</div>
+					</li>
+					<li class="roadmap-stop-wrap" style="--x: 18%; --y: 72%;">
+						<div class="roadmap-stop is-active" role="button" tabindex="0" data-panel="exp-zoox" data-progress="100" aria-pressed="true" aria-controls="exp-zoox">
+							<span class="roadmap-node" aria-hidden="true"></span>
+							<span class="roadmap-step">03</span>
+							<h3><a href="https://zoox.com/" target="_blank" rel="noopener noreferrer">Zoox</a></h3>
+							<p>SDE · Firmware / Telematics</p>
+							<time datetime="2021-02">Feb 2021 – Present</time>
+						</div>
+					</li>
+				</ol>
+			</div>
+
+			<div class="roadmap-panels">
+				<article class="roadmap-panel experience-detail" id="exp-umich" hidden>
+					<header class="roadmap-panel-header">
+						<h3><a href="https://umich.edu/" target="_blank" rel="noopener noreferrer">University of Michigan</a></h3>
+						<p>Research Assistant · Smart Sensor Interface · Ann Arbor, MI</p>
+						<time datetime="2018-04/2020-06">Apr 2018 – Jun 2020</time>
+					</header>
+					<p>C, Python, SQL, Grafana, C++, Eagle</p>
+					<ul>
+						<li>Integrated versatile multiple piecewise linear regression to fit in 24 KB of SRAM with ~18 ms of runtime.</li>
+						<li>Implemented a Python script using Flask and REST APIs to communicate with a Twilio gateway.</li>
+						<li>Designed and wrote Postgres database scripts, and 12+ data visualization boards for 4 different kinds of sensors.</li>
+						<li>Assembled and prototyped an IoT device’s PCB comprised of signal path conditioning using Eagle.</li>
+						<li>Researched and implemented 87.5% efficient encoding schemes for 2G SMS data packets.</li>
+						<li>Designed and tested 4 diverse analog sensors to demonstrate accuracy and reliability of the device’s calibration.</li>
+					</ul>
+				</article>
+
+				<article class="roadmap-panel experience-detail" id="exp-evigia" hidden>
+					<header class="roadmap-panel-header">
+						<h3><a href="https://evigia.com/" target="_blank" rel="noopener noreferrer">Evigia Systems, LLC</a></h3>
+						<p>Embedded Software Engineer · Ann Arbor, MI</p>
+						<time datetime="2019-10/2020-08">Oct 2019 – Aug 2020</time>
+					</header>
+					<p><strong>Conditional Monitoring System</strong> · C, Python, Saleae, Mbed</p>
+					<ul>
+						<li>Implemented custom SPI, USART, I2C, and flash drivers that utilize DMA for an ARM Cortex-M3 microcontroller.</li>
+						<li>Wrote Python scripts for debugging and modelling of the 768 Kb/s real-time sensor data stream.</li>
+						<li>Implemented SHA-256 and ECB schemes using Mbed libraries and lookup tables for secure and fast data encryption.</li>
+					</ul>
+					<p><strong>Real-Time Location System</strong> · C, Python, Bash, SQL, Docker, Grafana</p>
+					<ul>
+						<li>Automated Python scripts for configuration of Docker files, Postgres database, and Grafana dashboards.</li>
+						<li>Led and assisted the testing of mesh networks with ~10 IoT nodes and 100+ tags across different testing sites.</li>
+						<li>Optimized an ultra-wideband wireless module to support from 10 tags to 150 tags.</li>
+					</ul>
+				</article>
+
+				<article class="roadmap-panel experience-detail is-visible" id="exp-zoox">
+					<header class="roadmap-panel-header">
+						<h3><a href="https://zoox.com/" target="_blank" rel="noopener noreferrer">Zoox</a></h3>
+						<p>Software Development Engineer · Firmware / Telematics</p>
+						<time datetime="2021-02">Feb 2021 – Present</time>
+					</header>
 					<p>Production middleware, build/release systems, cellular provisioning, and validation for telematics and in-vehicle audio.</p>
 					<p><strong>Production C++ middleware</strong></p>
 					<ul>
@@ -111,47 +187,8 @@ description: Zack Chen builds production middleware, firmware build systems, and
 					<ul>
 						<li>Authored manufacturing provisioning and eSIM process proposals; designed shared-repository branch governance with a Tier-1 supplier; primary engineering liaison for ~5 years; ~60 wiki reference pages and 100+ design/RCA docs.</li>
 					</ul>
-				</div>
-			</article>
-			<article class="experience-entry">
-				<div class="experience-heading">
-					<h3><a href="https://evigia.com/" target="_blank" rel="noopener noreferrer">Evigia Systems, LLC</a></h3>
-					<p>Embedded Software Engineer · Ann Arbor, MI</p>
-					<time datetime="2019-10/2020-08">Oct 2019 – Aug 2020</time>
-				</div>
-				<div class="experience-detail">
-					<p><strong>Conditional Monitoring System</strong> · C, Python, Saleae, Mbed</p>
-					<ul>
-						<li>Implemented custom SPI, USART, I2C, and flash drivers that utilize DMA for an ARM Cortex-M3 microcontroller.</li>
-						<li>Wrote Python scripts for debugging and modelling of the 768 Kb/s real-time sensor data stream.</li>
-						<li>Implemented SHA-256 and ECB schemes using Mbed libraries and lookup tables for secure and fast data encryption.</li>
-					</ul>
-					<p><strong>Real-Time Location System</strong> · C, Python, Bash, SQL, Docker, Grafana</p>
-					<ul>
-						<li>Automated Python scripts for configuration of Docker files, Postgres database, and Grafana dashboards.</li>
-						<li>Led and assisted the testing of mesh networks with ~10 IoT nodes and 100+ tags across different testing sites.</li>
-						<li>Optimized an ultra-wideband wireless module to support from 10 tags to 150 tags.</li>
-					</ul>
-				</div>
-			</article>
-			<article class="experience-entry">
-				<div class="experience-heading">
-					<h3><a href="https://umich.edu/" target="_blank" rel="noopener noreferrer">University of Michigan</a></h3>
-					<p>Research Assistant · Smart Sensor Interface · Ann Arbor, MI</p>
-					<time datetime="2018-04/2020-06">Apr 2018 – Jun 2020</time>
-				</div>
-				<div class="experience-detail">
-					<p>C, Python, SQL, Grafana, C++, Eagle</p>
-					<ul>
-						<li>Integrated versatile multiple piecewise linear regression to fit in 24 KB of SRAM with ~18 ms of runtime.</li>
-						<li>Implemented a Python script using Flask and REST APIs to communicate with a Twilio gateway.</li>
-						<li>Designed and wrote Postgres database scripts, and 12+ data visualization boards for 4 different kinds of sensors.</li>
-						<li>Assembled and prototyped an IoT device’s PCB comprised of signal path conditioning using Eagle.</li>
-						<li>Researched and implemented 87.5% efficient encoding schemes for 2G SMS data packets.</li>
-						<li>Designed and tested 4 diverse analog sensors to demonstrate accuracy and reliability of the device’s calibration.</li>
-					</ul>
-				</div>
-			</article>
+				</article>
+			</div>
 		</section>
 
 		<section id="impact" class="portfolio-section">

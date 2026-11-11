@@ -10,7 +10,7 @@ if OUT.exists():
     shutil.rmtree(OUT)
 OUT.mkdir()
 
-for name in ("css", "img", "docs"):
+for name in ("css", "img", "docs", "js"):
     src = ROOT / name
     if src.exists():
         shutil.copytree(src, OUT / name)
