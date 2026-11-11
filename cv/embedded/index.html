@@ -1,0 +1,83 @@
+---
+layout: default
+title: Embedded Résumé | Zack Chen
+description: Embedded / firmware résumé for Zack Chen — Software Development Engineer.
+---
+<article class="page prose resume-page">
+	<header class="resume-header">
+		<h1>Zack Chen</h1>
+		<p class="resume-title">Software Development Engineer — Embedded / Firmware</p>
+		<p class="resume-contact"><a href="mailto:zachen.official@gmail.com">zachen.official@gmail.com</a> · <a href="https://github.com/zachen-official">GitHub</a> · <a href="https://www.linkedin.com/in/thuta-aung-909a22114">LinkedIn</a></p>
+		<p class="resume-variant-link"><a href="{{ '/cv/backend/' | relative_url }}">Also see: Backend résumé</a> · <a href="{{ '/cv/' | relative_url }}">All résumés</a></p>
+	</header>
+
+	<section>
+		<h2>Summary</h2>
+		<p>Software development engineer with ~6 years on telematics and in-vehicle audio for an autonomous vehicle fleet. Writes production C++ middleware those devices run, Python build and provisioning systems that put firmware on them, and a compiler toolchain for an automotive audio bus. Shipped a cellular voice-readiness feature end to end, eSIM bring-up across two hardware generations, the signed deploy-artifact system behind 49 telematics and 22 audio firmware releases, and production fixes from coredumps, register state, and modem traces. Targeting Senior Software Development Engineer in embedded systems.</p>
+	</section>
+
+	<section>
+		<h2>Core technical areas</h2>
+		<p><strong>Embedded &amp; systems</strong> — Yocto/BitBake, systemd, POSIX IPC/shared memory, coredump and register-level crash analysis, kernel driver interfaces, iptables/conntrack, Linux bridges/VLANs, hostapd, automotive audio bus, PulseAudio, DLT, oFono / D-Bus / RIL, serial/syslog, tcpdump.</p>
+		<p><strong>Cellular &amp; telecom</strong> — LTE and 5G NSA/SA, eSIM under GSMA SGP.02 and SGP.32, eUICC profile management, APN/PDN and IMS, multi-carrier US MNO integration, modem log analysis.</p>
+		<p><strong>Languages &amp; implementation</strong> — C++ (production middleware, gTest), Python (services, build systems, CLIs, test frameworks), Bash; REST/gRPC, mTLS, JSON schema, pybind11; compiler / DSL design (codegen, decompilation, source maps, diagnostics).</p>
+		<p><strong>Build, release &amp; automation</strong> — Bazel, Docker, Git, Bamboo CI, signed release pipelines, programmable telephony APIs, MCP servers and agent tooling, TestRail.</p>
+	</section>
+
+	<section>
+		<h2>Experience</h2>
+		<h3><a href="https://zoox.com/" target="_blank" rel="noopener noreferrer">Zoox</a> — Software Development Engineer, Firmware / Telematics · Feb 2021 – Present</h3>
+		<ul>
+			<li>Designed and shipped a cellular voice-readiness scoring feature end to end (algorithm, service, JSON config, NSA/SA detection, telemetry cache, gTest) with fail-safe REST semantics for 5G-SA voice routing.</li>
+			<li>Redesigned the cellular watchdog as an explicit state machine with trace streaming (timer cut 2 min → 45 s); root-caused memory/IPC faults from coredumps and fixed modem, IMS, and PCIe/DMA issues on an automotive SoC.</li>
+			<li>Wrote a two-way compiler for an automotive audio bus (assembler-style source, compile/decompile, CI diagnostics, source-map replay of opaque driver errors).</li>
+			<li>Brought up eSIM on two generations (GSMA SGP.02 and SGP.32); wrote a factory-safe SIM-identity CLI and a ~1,900-line carrier-platform client/CLI; led 5G NSA/SA enablement through field validation.</li>
+			<li>Built the fleet firmware flashing and signed deploy-artifact system; release captain for 49 telematics and 22 audio firmware versions; own the OTA configure-and-provision contract across four repositories.</li>
+			<li>Sole owner of the telematics validation framework from first commit (430+ PRs); agent-based triage tooling; primary Tier-1 supplier liaison ~5 years.</li>
+		</ul>
+
+		<h3><a href="https://evigia.com/" target="_blank" rel="noopener noreferrer">Evigia Systems, LLC</a> — Embedded Software Engineer · Ann Arbor, MI · Oct 2019 – Aug 2020</h3>
+		<p><strong>Conditional Monitoring System</strong> · C, Python, Saleae, Mbed</p>
+		<ul>
+			<li>Implemented custom SPI, USART, I2C, and flash drivers that utilize DMA for an ARM Cortex-M3 microcontroller.</li>
+			<li>Wrote Python scripts for debugging and modelling of the 768 Kb/s real-time sensor data stream.</li>
+			<li>Implemented SHA-256 and ECB schemes using Mbed libraries and lookup tables for secure and fast data encryption.</li>
+		</ul>
+		<p><strong>Real-Time Location System</strong> · C, Python, Bash, SQL, Docker, Grafana</p>
+		<ul>
+			<li>Automated Python scripts for configuration of Docker files, Postgres database, and Grafana dashboards.</li>
+			<li>Led and assisted the testing of mesh networks with ~10 IoT nodes and 100+ tags across different testing sites.</li>
+			<li>Optimized an ultra-wideband wireless module to support from 10 tags to 150 tags.</li>
+		</ul>
+
+		<h3><a href="https://umich.edu/" target="_blank" rel="noopener noreferrer">University of Michigan, Ann Arbor</a> — Research Assistant, Smart Sensor Interface · Ann Arbor, MI · Apr 2018 – Jun 2020</h3>
+		<p>C, Python, SQL, Grafana, C++, Eagle</p>
+		<ul>
+			<li>Integrated versatile multiple piecewise linear regression to fit in 24 KB of SRAM with ~18 ms of runtime.</li>
+			<li>Implemented a Python script using Flask and REST APIs to communicate with a Twilio gateway.</li>
+			<li>Designed and wrote Postgres database scripts, and 12+ data visualization boards for 4 different kinds of sensors.</li>
+			<li>Assembled and prototyped an IoT device’s PCB comprised of signal path conditioning using Eagle.</li>
+			<li>Researched and implemented 87.5% efficient encoding schemes for 2G SMS data packets.</li>
+			<li>Designed and tested 4 diverse analog sensors to demonstrate accuracy and reliability of the device’s calibration.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Education</h2>
+		<p><strong>University of Michigan, Ann Arbor</strong> — B.S.E. Computer Engineering · Graduated April 2019</p>
+	</section>
+
+	<section>
+		<h2>Projects</h2>
+		<p><strong>Spinosaurus Wearable Vest</strong> (Python and C++) — Designed, fabricated and debugged a PCB comprised of a Bluetooth module, FTDI chip, and Atmega2560 with a rechargeable circuit for a low-powered, portable spine posture correcting wearable vest.</p>
+		<p><strong>Adaptive Cruise Control</strong> (MATLAB, Simulink, C) — Utilized FlexCAN for communication between simulated 6 vehicle stations; implemented PI and PID controllers for maintaining position and speed; utilized quadrature decoding on the MPC5643L’s eTimer to sense haptic-wheel angular position.</p>
+	</section>
+
+	<section>
+		<h2>Selected impact</h2>
+		<ul>
+			<li>1,353 commits across 6 repos · 750+ PRs authored / 580+ merged · 503 reviews · 39 epics owned · 1,332 issues resolved</li>
+			<li>49 telematics and 22 audio firmware versions shipped · Feb 2021 – present (~5 yr 9 mo)</li>
+		</ul>
+	</section>
+</article>

@@ -1,6 +1,6 @@
 name: Zack Chen
-title: Zack Chen | Firmware & Telematics
-description: Portfolio of Zack Chen, firmware and telematics SDET focused on embedded systems, cellular connectivity, and release automation.
+title: Zack Chen | Firmware, Middleware & Build Systems
+description: Portfolio of Zack Chen, software development engineer focused on firmware middleware, build systems, and cellular telematics.
 url: https://zachen-official.github.io
 baseurl: "/personal_website"
 markdown: kramdown

@@ -1,23 +1,23 @@
 ---
 layout: portfolio
-title: Zack Chen | Firmware & Telematics SDET
-description: Zack Chen builds validation, release, and production firmware for telematics and audio stacks on autonomous vehicles.
+title: Zack Chen | Firmware, Middleware & Build Systems
+description: Zack Chen builds production middleware, firmware build systems, and tooling for telematics and in-vehicle audio on autonomous vehicles.
 ---
 <div class="portfolio-layout">
 	<aside class="portfolio-rail">
 		<a class="portfolio-identity" href="{{ '/' | relative_url }}">
 			<h1>Zack Chen</h1>
 		</a>
-		<p class="portfolio-role">SDET — Firmware / Telematics</p>
-		<p class="portfolio-focus">Embedded · Cellular · Release Automation</p>
-		<p class="portfolio-intro">Embedded firmware SDET with ~6 years owning validation, release, and increasingly the implementation of Telematics Control Unit (TCU) and TUX audio stacks on Zoox’s autonomous vehicle fleet.</p>
+		<p class="portfolio-role">Software Development Engineer</p>
+		<p class="portfolio-focus">Firmware · Middleware · Build Systems</p>
+		<p class="portfolio-intro">Software development engineer with ~6 years on telematics and in-vehicle audio — writing production C++ middleware, Python build and provisioning systems, and a compiler toolchain for an automotive audio bus.</p>
 		<p class="resume-status" role="status"><a href="{{ '/cv/' | relative_url }}">View résumé</a></p>
 		<nav class="portfolio-nav" aria-label="Page sections">
 			<a href="#about">About</a>
 			<a href="#skills">Skills</a>
 			<a href="#experience">Experience</a>
 			<a href="#impact">Impact</a>
-			<a href="#work">Selected work</a>
+			<a href="#projects">Projects</a>
 		</nav>
 		<ul class="portfolio-social" aria-label="Contact and social links">
 			<li><a href="https://github.com/zachen-official">GitHub</a></li>
@@ -32,10 +32,10 @@ description: Zack Chen builds validation, release, and production firmware for t
 			<div class="about-grid">
 				<img src="{{ '/img/profile-jiufen.jpg' | relative_url }}" alt="Zack Chen" width="4284" height="5712">
 				<div>
-					<h2>A little about me</h2>
-					<p>I built and still own the TCU validation framework, firmware flashing and deploy-artifact system, and the release pipeline that carries a vendor drop to the fleet — 49 TCU firmware versions and 22 TUX versions shipped to production.</p>
-					<p>I’ve progressed from test-only ownership into production C++ middleware, modem and kernel-level root cause analysis, and process design across organizations: manufacturing TCU provisioning, eSIM activation, and source collaboration with a Tier-1 vendor.</p>
-					<p>Next I’m targeting Senior Embedded Middleware &amp; Automation — continuing that shift into production firmware, system architecture, and cross-org process leadership.</p>
+					<h2>A little bit about me</h2>
+					<p>I write the production C++ middleware telematics units run, the Python build and provisioning systems that put firmware on them, and a compiler toolchain for an automotive audio bus.</p>
+					<p>That includes a cellular voice-readiness feature from algorithm through service and gTest suite, the signing and deploy-artifact generator behind dozens of firmware releases, and production fault debug down to coredumps, register state, and modem traces.</p>
+					<p>I entered through validation and moved into implementation, systems architecture, and cross-organizational technical design — targeting Senior Software Development Engineer in either embedded or backend systems.</p>
 				</div>
 			</div>
 		</section>
@@ -45,16 +45,16 @@ description: Zack Chen builds validation, release, and production firmware for t
 			<h2>What I work with</h2>
 			<div class="skills-grid">
 				<article class="skill-block">
-					<h3>Cellular / telecom</h3>
-					<p>LTE and 5G NSA/SA provisioning, eSIM remote provisioning (SGP.02 and SGP.32), eUICC profile management, APN/PDN and IMS configuration, band and RAT selection, AT&amp;T / T-Mobile / Verizon integration, oFono / D-Bus / RIL, Qualcomm and Shannon modem log analysis.</p>
+					<h3>Languages &amp; implementation</h3>
+					<p>C++ (production middleware, gTest), Python (service clients, build systems, CLIs and test frameworks), Bash. REST and gRPC service design, mTLS, JSON schema and config loading, pybind11; compiler / DSL design — source language, codegen, decompilation, source maps, and diagnostics.</p>
 				</article>
 				<article class="skill-block">
-					<h3>Embedded systems</h3>
-					<p>Yocto/BitBake, systemd, POSIX IPC, iptables/conntrack, Linux bridges and VLANs, hostapd, A2B audio chains, PulseAudio, DLT logging, serial/syslog triage, tcpdump, coredump and register-level crash analysis.</p>
+					<h3>Embedded &amp; systems</h3>
+					<p>Yocto/BitBake, systemd, POSIX IPC and shared memory, coredump and register-level crash analysis, kernel driver interfaces, iptables/conntrack, Linux bridges and 802.1q VLANs, hostapd, automotive audio bus configuration, PulseAudio, DLT logging, oFono / D-Bus / RIL, serial/syslog triage, tcpdump.</p>
 				</article>
 				<article class="skill-block">
-					<h3>Languages &amp; tooling</h3>
-					<p>Python, C++ (gTest), Bash, Bazel, Docker, Git/GitHub Enterprise, Bamboo CI, Artifactory signed release pipelines, REST/mTLS, Twilio telephony APIs, Argus, TestRail, Jira/Confluence automation, MCP servers and agent tooling; A2B DSL/compiler design.</p>
+					<h3>Cellular, build &amp; automation</h3>
+					<p>LTE and 5G NSA/SA provisioning, eSIM under GSMA SGP.02 and SGP.32, eUICC profile management, APN/PDN and IMS, multi-carrier US MNO integration, modem log analysis. Bazel, Docker, Git, Bamboo CI, signed release pipelines, programmable telephony APIs, MCP servers and agent tooling.</p>
 				</article>
 			</div>
 		</section>
@@ -64,38 +64,83 @@ description: Zack Chen builds validation, release, and production firmware for t
 			<h2>Where I’ve worked</h2>
 			<article class="experience-entry">
 				<div class="experience-heading">
-					<h3>Zoox</h3>
-					<p>SDET, Firmware / TCU</p>
+					<h3><a href="https://zoox.com/" target="_blank" rel="noopener noreferrer">Zoox</a></h3>
+					<p>Software Development Engineer · Firmware / Telematics</p>
 					<time datetime="2021-02">Feb 2021 – Present</time>
 				</div>
 				<div class="experience-detail">
-					<p>Contractor Feb–Dec 2021; converted to full-time Nov 2021. Own validation, release, and growing production implementation for TCU and TUX across the fleet.</p>
-					<p><strong>Release pipeline &amp; flashing</strong></p>
+					<p>Production middleware, build/release systems, cellular provisioning, and validation for telematics and in-vehicle audio.</p>
+					<p><strong>Production C++ middleware</strong></p>
 					<ul>
-						<li>Built the firmware flashing and deploy-artifact system vehicles flash from — a single generator that turns a vendor drop into a signed deploy tarball, with per-version manifests, upgrade/provision layouts, and a structured failure taxonomy.</li>
-						<li>Re-architected artifact delivery around signed Artifactory tarballs and made the pipeline automatable (CI mode, RC tags, packaged deploy skills).</li>
-						<li>Release captain for TCU: 49 versions shipped (S7.8.3 → S8.4.102); owned TUX audio validation for 22 versions across three hardware revisions.</li>
+						<li>Designed and implemented a cellular voice-readiness scoring feature end to end — algorithm, service, JSON config loader, NSA/SA cell-type detection, telemetry cache integration, and gTest suite. Fail-safe semantics: any internal error returns a zero score rather than an HTTP failure. Feeds voice routing for 5G standalone, where a standalone-attached modem cannot carry voice.</li>
+						<li>Moved telematics APIs from on-demand modem reads to server-side aggregation and caching, then corrected cache staleness with push updates driven by the modem’s property-changed signal.</li>
+						<li>Redesigned the cellular watchdog as an explicit state machine with named transitions and trace streaming; cut the watchdog timer from 2 minutes to 45 seconds.</li>
+						<li>Added hardware pin-identification diagnostics to the REST status endpoint and telemetry cache; root-caused memory and IPC faults from coredumps and register state; delivered modem and IMS profile fixes across carriers.</li>
 					</ul>
-					<p><strong>TCU ↔ vehicle deploy integration</strong></p>
+					<p><strong>Compiler and language toolchain</strong></p>
 					<ul>
-						<li>Designed the OTA configure-and-provision contract between TCU firmware and the driving monorepo: Universal Config schema, deploy manifests, and a decision algorithm for upgrade vs. reprovision with defined failure semantics.</li>
-						<li>Implemented both sides across four repositories and owned cellular configuration management for AT&amp;T, T-Mobile, and Verizon as versioned profiles.</li>
+						<li>Wrote a two-way compiler for an automotive audio bus that configures microphone chains: assembler-style source language, compile to packed binary for the kernel driver, and decompile back to readable source.</li>
+						<li>CI-friendly diagnostics (file:line:severity, exit code = error count) and a source-map mechanism that replays opaque driver error codes as annotated source lines.</li>
 					</ul>
-					<p><strong>eSIM lifecycle — Gen1 and Gen2</strong></p>
+					<p><strong>Build, release &amp; deploy architecture</strong></p>
 					<ul>
-						<li>Brought up eSIM end to end on both generations: Gen1 SGP.02 (CMP-driven) and Gen2 SGP.32 (eIM/IPA), including a ~1,900-line SimManager client/CLI and Gen2 manufacturing activation tooling.</li>
-						<li>Owning Gen2 manufacturing-line eSIM bring-up in 2026, including transport migration from REST/SSH to gRPC.</li>
+						<li>Established the firmware flashing and deploy-artifact system the fleet runs on — generator from supplier drop to signed artifact, per-version manifests, upgrade/provision layouts, and a structured failure taxonomy. 49 telematics and 22 audio firmware versions shipped.</li>
+						<li>Re-architected delivery around signed artifacts from the artifact repository; converted the pipeline to non-interactive CI with reproducible, commit-pinned builds.</li>
+						<li>Designed and own the OTA configure-and-provision contract between telematics firmware and the vehicle software stack across four repositories, including the upgrade/reprovision decision algorithm and versioned multi-carrier cellular profiles.</li>
 					</ul>
-					<p><strong>Test framework, firmware &amp; connectivity</strong></p>
+					<p><strong>Cellular &amp; eSIM provisioning</strong></p>
 					<ul>
-						<li>Sole owner of the TCU validation framework from first commit: 430+ PRs authored, critical/functional/stress suites, Twilio-driven two-way-audio automation with PESQ scoring, and CI that cut release validation from two weeks to one.</li>
-						<li>Shipped production C++ features including Voice Readiness Score and pin_id_status middleware; root-caused modem, IPC, and fleet connectivity faults.</li>
-						<li>Brought 5G NSA/SA onto Gen1, redesigned the cellular watchdog as an explicit state machine, and owned P1 production escalations.</li>
+						<li>Brought up eSIM across two hardware generations and two architectures — GSMA SGP.02 (tooling-driven) and SGP.32 (eIM/IPA).</li>
+						<li>Wrote a ~1,900-line carrier-platform API client/CLI for profile lifecycle and carrier switching, plus a factory-safe SIM-identity CLI (~620 lines) that restores provisioning in a finally block so a mid-run failure cannot strand a unit on the wrong SIM.</li>
+						<li>Led 5G NSA/SA enablement on the current hardware generation — PoC through field validation across three metro areas and deploy-flow integration.</li>
 					</ul>
-					<p><strong>Process &amp; tooling leadership</strong></p>
+					<p><strong>Test infrastructure &amp; automation</strong></p>
 					<ul>
-						<li>Authored manufacturing TCU provisioning and eSIM lifecycle proposals that changed how the line builds and activates units; designed vendor shared-repository branch governance with Harman.</li>
-						<li>Built agent-based triage (Slack-dispatched) for TCU tickets, Argus dashboards, and MCP/Cursor skills for release and eSIM workflows; ~60 Confluence reference pages and primary liaison to Harman for ~5 years.</li>
+						<li>Sole owner of the telematics validation framework from first commit: 430+ PRs; critical/functional/stress suites; programmable telephony for two-way-audio automation with PESQ scoring.</li>
+						<li>Built agent-based triage and chat-dispatched root-cause skills, release automation, diagnostics dashboards, and MCP tooling.</li>
+					</ul>
+					<p><strong>Technical leadership</strong></p>
+					<ul>
+						<li>Authored manufacturing provisioning and eSIM process proposals; designed shared-repository branch governance with a Tier-1 supplier; primary engineering liaison for ~5 years; ~60 wiki reference pages and 100+ design/RCA docs.</li>
+					</ul>
+				</div>
+			</article>
+			<article class="experience-entry">
+				<div class="experience-heading">
+					<h3><a href="https://evigia.com/" target="_blank" rel="noopener noreferrer">Evigia Systems, LLC</a></h3>
+					<p>Embedded Software Engineer · Ann Arbor, MI</p>
+					<time datetime="2019-10/2020-08">Oct 2019 – Aug 2020</time>
+				</div>
+				<div class="experience-detail">
+					<p><strong>Conditional Monitoring System</strong> · C, Python, Saleae, Mbed</p>
+					<ul>
+						<li>Implemented custom SPI, USART, I2C, and flash drivers that utilize DMA for an ARM Cortex-M3 microcontroller.</li>
+						<li>Wrote Python scripts for debugging and modelling of the 768 Kb/s real-time sensor data stream.</li>
+						<li>Implemented SHA-256 and ECB schemes using Mbed libraries and lookup tables for secure and fast data encryption.</li>
+					</ul>
+					<p><strong>Real-Time Location System</strong> · C, Python, Bash, SQL, Docker, Grafana</p>
+					<ul>
+						<li>Automated Python scripts for configuration of Docker files, Postgres database, and Grafana dashboards.</li>
+						<li>Led and assisted the testing of mesh networks with ~10 IoT nodes and 100+ tags across different testing sites.</li>
+						<li>Optimized an ultra-wideband wireless module to support from 10 tags to 150 tags.</li>
+					</ul>
+				</div>
+			</article>
+			<article class="experience-entry">
+				<div class="experience-heading">
+					<h3><a href="https://umich.edu/" target="_blank" rel="noopener noreferrer">University of Michigan</a></h3>
+					<p>Research Assistant · Smart Sensor Interface · Ann Arbor, MI</p>
+					<time datetime="2018-04/2020-06">Apr 2018 – Jun 2020</time>
+				</div>
+				<div class="experience-detail">
+					<p>C, Python, SQL, Grafana, C++, Eagle</p>
+					<ul>
+						<li>Integrated versatile multiple piecewise linear regression to fit in 24 KB of SRAM with ~18 ms of runtime.</li>
+						<li>Implemented a Python script using Flask and REST APIs to communicate with a Twilio gateway.</li>
+						<li>Designed and wrote Postgres database scripts, and 12+ data visualization boards for 4 different kinds of sensors.</li>
+						<li>Assembled and prototyped an IoT device’s PCB comprised of signal path conditioning using Eagle.</li>
+						<li>Researched and implemented 87.5% efficient encoding schemes for 2G SMS data packets.</li>
+						<li>Designed and tested 4 diverse analog sensors to demonstrate accuracy and reliability of the device’s calibration.</li>
 					</ul>
 				</div>
 			</article>
@@ -105,50 +150,32 @@ description: Zack Chen builds validation, release, and production firmware for t
 			<p class="section-kicker">04 / Impact</p>
 			<h2>By the numbers</h2>
 			<ul class="impact-metrics">
-				<li><strong>~5 yr 8 mo</strong> at Zoox (Feb 2021 – Present)</li>
-				<li><strong>49</strong> TCU firmware versions shipped</li>
-				<li><strong>22</strong> TUX firmware versions shipped</li>
+				<li><strong>~5 yr 9 mo</strong> at Zoox (Feb 2021 – Present)</li>
+				<li><strong>49</strong> telematics firmware versions shipped</li>
+				<li><strong>22</strong> audio firmware versions shipped</li>
 				<li><strong>750+ / 580+</strong> PRs authored / merged</li>
-				<li><strong>1,353</strong> commits across 6 repos</li>
-				<li><strong>1,332</strong> Jira issues resolved as assignee</li>
-				<li><strong>2 weeks → 1 week</strong> release validation cycle</li>
+				<li><strong>1,353</strong> commits across 6 repositories</li>
+				<li><strong>1,332</strong> issues resolved as assignee</li>
 			</ul>
-			<p class="impact-note">Collaboration across Harman, Conekt, Connectivity Ops, Manufacturing/FSE, HWSI, AHE, RSI/ProdSec, Release Management, TUX/Cerence, IT, and Validation.</p>
 		</section>
 
-		<section id="work" class="portfolio-section">
-			<p class="section-kicker">05 / Selected work</p>
-			<h2>Things I’ve built</h2>
+		<section id="projects" class="portfolio-section">
+			<p class="section-kicker">05 / Projects</p>
+			<h2>Projects</h2>
 			<article class="project-entry">
-				<img src="{{ '/img/smart.JPG' | relative_url }}" alt="Embedded systems and telematics hardware context" width="800" height="600">
+				<img src="{{ '/img/vest.jpg' | relative_url }}" alt="Spinosaurus wearable vest PCB" width="800" height="600">
 				<div>
-					<h3>TCU release &amp; deploy pipeline</h3>
-					<p>End-to-end system from vendor firmware drop to signed fleet flash: deploy-artifact generator, Artifactory delivery, vehicle-side configure/provision contract, and release captaincy for dozens of production cuts.</p>
-					<p class="project-skills">Python · Artifactory · Signed releases · System design</p>
+					<h3>Spinosaurus Wearable Vest</h3>
+					<p>Designed, fabricated and debugged a PCB comprised of a Bluetooth module, FTDI chip, and Atmega2560 with a rechargeable circuit for a low-powered, portable spine posture correcting wearable vest.</p>
+					<p class="project-skills">Python · C++</p>
 				</div>
 			</article>
 			<article class="project-entry">
-				<img src="{{ '/img/signal.png' | relative_url }}" alt="Cellular signal and connectivity" width="800" height="600">
+				<img src="{{ '/img/smart.JPG' | relative_url }}" alt="Embedded control systems hardware" width="800" height="600">
 				<div>
-					<h3>eSIM lifecycle (Gen1 &amp; Gen2)</h3>
-					<p>Two remote-provisioning architectures — SGP.02 CMP tooling and SGP.32 eIM/IPA — plus manufacturing-hardened activation flows and Gen2 line bring-up.</p>
-					<p class="project-skills">eUICC · SGP.02 / SGP.32 · REST · Manufacturing</p>
-				</div>
-			</article>
-			<article class="project-entry">
-				<img src="{{ '/img/pro.JPG' | relative_url }}" alt="Firmware and validation work in the lab" width="800" height="600">
-				<div>
-					<h3>Voice Readiness Score &amp; TCU middleware</h3>
-					<p>Production C++ feature scoring each TCU’s fitness for voice calls (RSRP, IMS, SA pinning), served from a cached telematics API path with fail-safe semantics for dual-TCU 5G-SA routing.</p>
-					<p class="project-skills">C++ · gTest · Yocto · Cellular APIs</p>
-				</div>
-			</article>
-			<article class="project-entry">
-				<img src="{{ '/img/bb.JPG' | relative_url }}" alt="Toolchain and software collaboration" width="1200" height="600">
-				<div>
-					<h3>A2B compiler (a2bc)</h3>
-					<p>Two-way toolchain for Analog Devices AD242x microphone chains: assembler-style source language, compile/decompile backends, CI-friendly diagnostics, and source-map replay of opaque kernel bus errors.</p>
-					<p class="project-skills">DSL · Compiler design · A2B · TUX audio</p>
+					<h3>Adaptive Cruise Control</h3>
+					<p>Utilized FlexCAN for communication between simulated 6 vehicle stations. Implemented PI and PID controllers for maintaining position and speed of the car. Utilized quadrature decoding functionality of the MPC5643L’s eTimer to sense the angular position of the haptic wheel.</p>
+					<p class="project-skills">MATLAB · Simulink · C</p>
 				</div>
 			</article>
 		</section>

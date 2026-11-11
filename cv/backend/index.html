@@ -1,0 +1,108 @@
+---
+layout: default
+title: Backend Résumé | Zack Chen
+description: Backend / platform résumé for Zack Chen — Services, APIs & Build Infrastructure.
+---
+<article class="page prose resume-page">
+	<header class="resume-header">
+		<h1>Zack Chen</h1>
+		<p class="resume-title">Backend / Platform Engineer — Services, APIs &amp; Build Infrastructure</p>
+		<p class="resume-contact"><a href="mailto:zachen.official@gmail.com">zachen.official@gmail.com</a> · <a href="https://github.com/zachen-official">GitHub</a> · <a href="https://www.linkedin.com/in/thuta-aung-909a22114">LinkedIn</a></p>
+		<p class="resume-variant-link"><a href="{{ '/cv/embedded/' | relative_url }}">Also see: Embedded résumé</a> · <a href="{{ '/cv/' | relative_url }}">All résumés</a></p>
+	</header>
+
+	<section>
+		<h2>Summary</h2>
+		<p>Backend and platform engineer with ~6 years building the services, API clients, and release infrastructure behind an autonomous vehicle fleet’s connectivity platform. Designed and shipped a scoring service in C++ behind a REST endpoint with fail-safe error semantics; replaced per-request device round trips with a server-side cache, then fixed its read-after-write consistency with push-based invalidation; wrote the client library that drives a third-party carrier provisioning platform; and built the signed artifact pipeline that has delivered every firmware release to production for the past three years. Strongest on distributed-systems problems: reconciling declared state against observed state, cache coherency, idempotent retry and rollback semantics, and failure handling that degrades instead of cascading.</p>
+	</section>
+
+	<section>
+		<h2>Core technical areas</h2>
+		<p><strong>Services &amp; APIs</strong> — REST API design, versioning, and migration; gRPC; mTLS and certificate management; JSON schema and config loading; protobuf schema design; contract testing in CI; third-party API client design; pybind11 bindings across the Python/C++ boundary.</p>
+		<p><strong>Distributed systems &amp; reliability</strong> — declared-versus-observed state reconciliation, cache coherency and invalidation, read-after-write consistency, idempotency and bounded retry, rollback and graceful degradation, push-based event propagation, fault isolation, single-point-of-failure analysis and mitigation planning.</p>
+		<p><strong>Languages</strong> — Python (service clients, CLIs, build systems, and test frameworks; multi-thousand-line packages as sole author), C++ (production services, gTest), Bash; DSL and compiler design (codegen, decompilation, source maps, diagnostics).</p>
+		<p><strong>Infrastructure &amp; delivery</strong> — Bazel, Docker, CI pipeline design and parallelization, artifact-repository publishing, cryptographic artifact signing, reproducible builds pinned by commit, release automation, observability dashboards, structured logging, pre-commit tooling.</p>
+		<p><strong>Systems</strong> — Linux: systemd, POSIX IPC and shared memory, D-Bus, netfilter/iptables, bridges and 802.1q VLANs, Yocto/BitBake; coredump and register-level crash analysis, tcpdump.</p>
+	</section>
+
+	<section>
+		<h2>Experience</h2>
+		<h3><a href="https://zoox.com/" target="_blank" rel="noopener noreferrer">Zoox</a> — Firmware / Telematics · Feb 2021 – Present</h3>
+
+		<h4>Service implementation and API design</h4>
+		<ul>
+			<li>Designed and implemented a C++ scoring service end to end (algorithm, config loader, telemetry cache, gTest) served over REST with fail-safe semantics: internal errors return a zero score rather than an HTTP failure. Consumed by the production call-routing path.</li>
+			<li>Replaced per-request device round trips with server-side aggregation and caching, then fixed read-after-write staleness with push invalidation driven by the device’s property-changed event.</li>
+			<li>Owned the REST surface the fleet orchestration layer calls — including a live GET-to-POST migration, soft-maintenance mode, and profile-recommendation / deploy-matrix endpoints — plus a CI contract-validation framework for the whole surface.</li>
+		</ul>
+
+		<h4>Third-party API integration</h4>
+		<ul>
+			<li>Wrote a ~1,900-line carrier-platform API client/CLI (sole author) with a checked HTTP client, orchestration layer, and provider-profile hierarchy that hides operator differences behind one interface; delivered as a five-PR stack with a full unit suite.</li>
+			<li>Solved upstream read-after-write inconsistency with a per-resource dirty flag that forces refresh on the next read, eliminating a class of false failures; wrote a second OpenAPI client when the platform moved to a different provisioning standard.</li>
+		</ul>
+
+		<h4>Distributed state and orchestration</h4>
+		<ul>
+			<li>Designed and own the reconciliation contract between the fleet orchestration layer and the devices it manages; implemented both sides across four repositories.</li>
+			<li>Defined per-unit configuration and versioned release-manifest schemas; compare declared vs reported state independently (upgrade vs reprovision) with explicit failure semantics — self-rollback, bounded reboot-and-retry, and escalation on package-install failure.</li>
+			<li>Own multi-operator configuration management as versioned, reviewed profile sets selected by a deploy matrix so only reviewed parameters reach production.</li>
+		</ul>
+
+		<h4>Build, release, and artifact infrastructure</h4>
+		<ul>
+			<li>Built the artifact-generation and signing pipeline the fleet is delivered through (~940-line generator): per-version manifests, upgrade/provision layouts, cross-platform signatures, and a structured failure taxonomy. Every release for three years has been cut with it.</li>
+			<li>Re-architected delivery around signed artifacts from the artifact repository; commit-pinned package manager for reproducible builds; automated non-interactive CI publish flows.</li>
+			<li>Release owner for the platform: 49 releases shipped plus 22 releases of a second component across three hardware revisions.</li>
+		</ul>
+
+		<h4>Reliability and production debugging</h4>
+		<ul>
+			<li>Root-caused memory and IPC faults in production C++ services from coredumps and register state (SIGBUS, shared-memory unlink, SIGSEGV); redesigned a recovery watchdog as an explicit state machine with trace streaming (detection window 2 min → 45 s).</li>
+			<li>Authored RCA for an Ethernet DMA halt caused by PCIe link power-down; owned P1 production escalations and hotfix strategy.</li>
+		</ul>
+
+		<h4>Test infrastructure and CI</h4>
+		<ul>
+			<li>Sole owner of the platform validation framework from first commit (430+ PRs): device abstraction, provisioning/install CLIs, multi-provider fixtures, and parallelized CI.</li>
+			<li>Automated end-to-end voice-call integration against a cloud telephony API with PESQ quality scoring under clean and degraded conditions.</li>
+		</ul>
+
+		<h4>Automation services and internal tooling</h4>
+		<ul>
+			<li>Built an agent-based triage pipeline that takes an incident ticket to a root cause unattended, plus a chat-bot service that dispatches agent runs from the team channel.</li>
+			<li>Built diagnostics dashboards, an MCP server for the test-management system, build-and-publish automation, and a daily-journal service summarizing issue-tracker activity.</li>
+		</ul>
+
+		<h4>Compiler and language toolchain</h4>
+		<ul>
+			<li>Wrote a two-way compiler for an automotive audio bus: assembler-style source language, compile/decompile backends, CI-friendly diagnostics, and source-map replay of opaque driver error codes.</li>
+		</ul>
+
+		<h4>Technical leadership</h4>
+		<ul>
+			<li>Designed shared-repository branch governance with an external engineering partner; authored the process proposal that relocated device provisioning in the production flow; primary liaison to a Tier-1 hardware partner for ~5 years.</li>
+			<li>Authored ~60 wiki pages as organizational reference material for provisioning, deploy, REST APIs, configuration, and release process, plus the team’s PR etiquette guide and template.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Education</h2>
+		<p><strong>University of Michigan, Ann Arbor</strong> — B.S.E. Computer Engineering · Graduated April 2019</p>
+	</section>
+
+	<section>
+		<h2>Selected impact</h2>
+		<ul>
+			<li>Code — 1,353 commits across 6 repositories; 750+ pull requests authored, 580+ merged; 503 pull requests reviewed for others</li>
+			<li>Delivery — 49 platform releases and 22 component releases shipped to production</li>
+			<li>Ownership — 39 epics owned; 1,332 issues resolved as assignee</li>
+			<li>Tenure — Feb 2021 – present (~5 yr 9 mo)</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Career direction</h2>
+		<p>Targeting backend and platform engineering: service implementation, API design, and the delivery infrastructure underneath them — more of the scoring service and cache layer, the reconciliation contract and its failure semantics, the carrier-platform client and its consistency model, and the signed artifact pipeline, applied to a larger service surface and a bigger request volume.</p>
+	</section>
+</article>
