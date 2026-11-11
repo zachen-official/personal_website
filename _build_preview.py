@@ -7,8 +7,19 @@ ROOT = pathlib.Path(__file__).resolve().parent
 OUT = ROOT / "_preview"
 
 if OUT.exists():
-    shutil.rmtree(OUT)
-OUT.mkdir()
+    try:
+        shutil.rmtree(OUT)
+    except OSError:
+        # Windows may keep a lock on _preview if a server cwd is inside it.
+        for child in OUT.iterdir():
+            if child.is_dir():
+                shutil.rmtree(child, ignore_errors=True)
+            else:
+                try:
+                    child.unlink()
+                except OSError:
+                    pass
+OUT.mkdir(exist_ok=True)
 
 for name in ("css", "img", "docs", "js"):
     src = ROOT / name
