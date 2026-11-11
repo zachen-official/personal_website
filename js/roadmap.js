@@ -31,16 +31,8 @@
   }
 
   stops.forEach(function (stop) {
-    stop.addEventListener("click", function (event) {
-      if (event.target.closest("a")) return;
+    stop.addEventListener("click", function () {
       activate(stop);
-    });
-    stop.addEventListener("keydown", function (event) {
-      if (event.target.closest("a")) return;
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        activate(stop);
-      }
     });
   });
 
